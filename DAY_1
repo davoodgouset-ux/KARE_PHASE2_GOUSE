@@ -13,3 +13,16 @@ class Main{
     }
 }
 //output:  \n
+
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter A value : ");
+        int a=sc.nextInt();
+        System.out.println("A value is: "+a);
+        
+    }
+}//output:A values is :(user data)
+//getting know about scanner class and displaying in display panel
+//
