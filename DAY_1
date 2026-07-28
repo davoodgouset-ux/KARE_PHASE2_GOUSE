@@ -4,7 +4,7 @@ class Main{
         System.out.print("cse \"KARE\" students");
     }
 }
-//cse \"KARE\" students
+//output:cse \"KARE\" students
 
 //to print \n
 class Main{
@@ -12,4 +12,4 @@ class Main{
         System.out.println("\\n");
     }
 }
-//  \n
+//output:  \n
