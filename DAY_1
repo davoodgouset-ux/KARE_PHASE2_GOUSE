@@ -1,0 +1,7 @@
+//programe to print esacpe sequance of \"\" it string delimeter to escape the string
+class Main{
+    public static void main(String [] args){
+        System.out.print("cse \"KARE\" students");
+    }
+}
+//cse \"KARE\" students
