@@ -5,3 +5,11 @@ class Main{
     }
 }
 //cse \"KARE\" students
+
+//to print \n
+class Main{
+    public static void main(String [] args){
+        System.out.println("\\n");
+    }
+}
+//  \n
