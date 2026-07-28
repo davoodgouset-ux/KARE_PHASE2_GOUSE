@@ -26,3 +26,48 @@ class Main{
 }//output:A values is :(user data)
 //getting know about scanner class and displaying in display panel
 //
+
+import java.util.Scanner;
+public class Main{
+    public static void main (String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enetr pi value: ");
+        float pi=sc.nextFloat();
+        System.out.print("Enetred pi value:"+pi);
+    }
+}//output:pi values input of nextFloat
+
+import java.util.Scanner;
+public class Main{
+    public static void main (String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter character");
+        char f=sc.next().charAt(0);
+        System.out.println("Ther enterd character is "+f);
+        
+        
+    }
+}
+
+//write a java program to get a float number and printit with two decimal point
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter float value: ");
+        float a=sc.nextFloat();
+        System.out.printf("the enter float value %.4f",a);
+        
+    }
+}//format specifier is important usage after printf statement its called format specifier
+
+//write a java program from user to ge a double input from user and print it
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter double value value: ");
+        double a=sc.nextDouble();
+        System.out.printf("the enter double value%.3f ",a);
+    }
+}
