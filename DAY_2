@@ -157,3 +157,38 @@ class Main {
 		sc.close();
 	}
 }
+
+//to check whether number is leap year or not 
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter a year : ");
+        int year = sc.nextInt();
+        if(year%400==0 || (year%100!=0 &&year%4==0)){
+            System.out.println(year +" is a Leap year");
+        }
+        else{
+            System.out.println(year+ "is Not a lear year");
+        }
+    }
+}
+//to check given time is existed in railway time
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter hour : ");
+        int HH = sc.nextInt();
+        System.out.print("Enter minutes");
+        int MN = sc.nextInt();
+        System.out.print("Enter Seconds");
+         int SC = sc.nextInt();
+        if(HH>=0&&HH<=24 && MN>=00&&MN<=59 && SC>=00&&MN<=59){
+            System.out.println("VALID TIMING");
+        }
+        else{
+            System.out.println("INVALID TMING");
+        }
+    }
+}
