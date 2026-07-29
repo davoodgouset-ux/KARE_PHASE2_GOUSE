@@ -124,3 +124,12 @@ class Main{
         System.out.println("f value"+(f++));
     }
 }//post incremnt and pre increment
+//99
+a value100
+b value98
+c value98
+e value97
+f value98
+98
+f value99
+
