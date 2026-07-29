@@ -48,3 +48,112 @@ class Main{
     }
 }
 //error
+
+//odd or even
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a Number :");
+        int a=sc.nextInt();
+        if(a%2!=0){
+            System.out.println("enterd number is :"+a+ "odd");
+        }
+        else{
+            System.out.println("enterd number is: "+a+ "even");
+        }
+        sc.close();
+    }
+}
+
+//get two numbers if they are equal then print they are equal 
+//2 2 then 2 and 2 are equal
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter TWO  NumberS :");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        if (a!=b){
+            System.out.println(a +"AND "+b+" ARE NOT EQUal");
+        }else{
+            System.out.println(a +"and "+b +" ARE  EQUAL");
+        }
+        sc.close();
+    }
+}
+
+/*write a java program to check the given person age to vote or not*/
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your age :");
+        int age=sc.nextInt();
+       // int b=sc.nextInt();
+        if(age<18){
+            System.out.print("you cannot vote");
+        }
+        else{
+            System.out.println("you can vote");
+        }
+        sc.close();
+    }
+}
+
+/*write a java program to check whther number is divisible by if not print the reaminder at end */
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number  :");
+        long a=sc.nextLong();
+        //int b=sc.nextInt();
+        if(a%3==0){
+            System.out.println(a+" is divisible by 3");
+        }else{
+            System.out.println(a+" not divisible by 3"+" and remainder is :"+(a%3));
+        }
+        sc.close();
+    }
+}
+/*write a java program to check greatest of three numbers*/
+import java.util.Scanner;
+class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a number  :");
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int c=sc.nextInt();
+		if(a>b && a>c) {
+			System.out.println(a+"is a ,that is  greater.");
+		} else if(b>a && b>c) {
+			System.out.println(b+"is  b ,that is  greater.");
+		}else{
+		    System.out.println(c+" is c ,that is greater.");
+		}
+		sc.close();
+	}
+}
+
+/*write a java program to check smallest of three numbers*/
+import java.util.Scanner;
+class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a number  :");
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int c=sc.nextInt();
+		if(a<b && a<c) {
+			System.out.println(a+"is a ,that is  smaller.");
+		} else if(b<a && b<c) {
+			System.out.println(b+"is  b ,that is  smaller.");
+		}else{
+		    System.out.println(c+" is c ,that is smaller.");
+		}
+		sc.close();
+	}
+}
