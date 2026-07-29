@@ -184,7 +184,7 @@ public class Main{
         int MN = sc.nextInt();
         System.out.print("Enter Seconds");
          int SC = sc.nextInt();
-        if(HH>=0&&HH<=24 && MN>=00&&MN<=59 && SC>=00&&MN<=59){
+        if(HH>=0&&HH<=23 && MN>=00&&MN<=59 && SC>=00&&MN<=59){
             System.out.println("VALID TIMING");
         }
         else{
