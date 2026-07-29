@@ -1,0 +1,50 @@
+//does conditional statements allow boolean values-->yes
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+       if(true)
+       System.out.print("Gouse");
+       else
+       System.out.print("No name");
+    }
+}//output: Gouse
+//use case of if else when if condition false
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+       int a=3;
+       if(a==4)
+       System.out.println(a+5);
+       else
+       System.out.println(a-8);
+    }
+}
+
+//associvity rule from left right since both / and * are same
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+       if(!true)
+       System.out.println(9+5);
+       else
+       System.out.println(5+6/2*10);
+    }
+}//35
+
+// we have to use curly braces if we use two statements since two statements
+//with out curly braces there are two statements
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+       if(2+2==4)
+       System.out.println("hi");
+       System.out.println(" GOuse");
+       else
+       System.out.println("Sorry");
+    }
+}
+//error
