@@ -218,7 +218,7 @@ class Main{
       Scanner sc=new Scanner(System.in);
       System.out.print("Enter a number : ");
       int num=sc.nextInt();
-      int num2=0;
+      int num2=0;//container for addition
       for(int i=1;i<=20;i++){
           num2+=num;
           System.out.println(num +" * "+i+" "+"= "+(num2));
