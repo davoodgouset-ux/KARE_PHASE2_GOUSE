@@ -1,0 +1,94 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter you department code \n Cse =1 \n ece=2 \n eee=3 \n mech=4 \n civil=5\n enter number: ");
+        int input =sc.nextInt();
+        switch (input){
+            case 1:
+                System.out.println("Cse->8th block");
+                break;
+            case 2:
+                System.out.println("Ece->9th block");
+                break;
+            case 3:
+                System.out.println("Eee->7th block");
+                break;
+            case 4:
+                System.out.println("mech->6th block");
+                break;
+            case 5:
+                System.out.println("Civil->11th block");
+                break;
+            default:
+                System.out.println("Invalid number");
+        }
+    }
+}
+output:Enter you department code 
+ Cse =1 
+ ece=2 
+ eee=3 
+ mech=4 
+ civil=5
+ enter number: 2
+Ece->9th block
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter first number : ");
+        int a=sc.nextInt();
+        System.out.print("Enter second number : ");
+        int b =sc.nextInt();
+        System.out.print(" \n add->1 \n sub->2 \n mul->3 \n div->4 \n modulo->5 \n floor division->6 \n which operation needed to perform : ");
+        int input=sc.nextInt();
+        switch (input){
+            case 1:{
+                int res=a+b;
+                System.out.println("addition of a and b: "+res);
+                break;
+            }
+            case 2:{
+                int res=a-b;
+                System.out.println("subtraction of  a and b: "+res);
+                break;
+            }
+            case 3:{
+                int res=a*b;
+                System.out.println("multiplication of  a and b: "+res);
+                break;
+            }
+            case 4:{
+                float res=a/b;
+                System.out.println("division of   a and b: "+res);
+                break;
+            }
+            case 5:{
+                float res=a%b;
+                System.out.println("modulo of  a and b: "+res);
+                break;
+            }
+            case 6:{
+                int res=a/b;
+                System.out.println(" floor divion of  a and b: "+res);
+                break;
+            }
+            default:
+                System.out.println("Invalid number: please try again ");
+        }
+    }
+}
+output:
+Enter first number : 3
+Enter second number : 4
+ 
+ add->1 
+ sub->2 
+ mul->3 
+ div->4 
+ modulo->5 
+ floor division->6 
+ which operation needed to perform : 6
+ floor divion of  a and b: 0
