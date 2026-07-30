@@ -225,4 +225,52 @@ class Main{
       }
     }
 }
-
+//arrays fixinf size to array,inputof array values,printing values,find number in array index,max and min value
+import java.util.Scanner;
+ class Main{
+public static void main(String [] args){
+    Scanner sc=new Scanner(System.in);
+    System.out.print("Enter number of sujects: ");
+    int size=sc.nextInt();
+    int marks[]=new int[size];
+    for(int i=0;i<size;i++){
+        marks[i]=sc.nextInt();
+    }
+    for(int i=0;i<marks.length;i++){
+        System.out.println(" the marks are : "+marks[i]);
+    }
+    System.out.println("Which subject marks need to find: ");
+    int Search=sc.nextInt();
+    for(int i=0;i<marks.length;i++){
+        if(marks[i]==Search){
+            System.out.println("The index of enterd marks are :"+i);
+         }
+        //  else{
+        // System.out.println("There is no marks like that ");
+        // }
+    }
+    int min =marks[0];
+    int max =marks[0];
+    for(int num:marks){
+        if(num<min)
+        min=num;
+        if(num>max)
+        max=num;
+    }
+    System.out.println("max : "+max);
+    System.out.println("min : "+min);
+    
+    }
+}
+Enter number of sujects: 3
+12
+11
+16
+ the marks are : 12
+ the marks are : 11
+ the marks are : 16
+Which subject marks need to find: 
+16
+The index of enterd marks are :2
+max : 16
+min : 11
