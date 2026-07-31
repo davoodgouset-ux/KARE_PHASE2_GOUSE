@@ -274,3 +274,38 @@ Which subject marks need to find:
 The index of enterd marks are :2
 max : 16
 min : 11
+//2d array input of size(rows,clos),print,find an element in array 2 for loops
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter no.of rows : ");
+        int rows=sc.nextInt();
+        System.out.print("enter no.of cols : ");
+        int cols=sc.nextInt();
+        int [][] d2arr=new int[rows][cols];
+        //intput
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                d2arr[i][j]=sc.nextInt();
+            }
+            //System.out.println("");
+        }
+        System.out.print("enter element to find: ");
+        int num=sc.nextInt();
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                if(d2arr[i][j]==num){
+                    System.out.print("row at "+i+"col at "+j);
+                }
+            }
+        }
+        //output
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                System.out.print(d2arr[i][j]+ " ");
+            }
+            System.out.println(" ");
+        }
+    }
+}
