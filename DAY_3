@@ -353,3 +353,54 @@ max: 50
 min: 10
 4.9E-324
 2.147483647E9
+
+/*
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int arr[]=new int[n];
+	    for(int i=0;i<n;i++){
+	        arr[i]=sc.nextInt();
+	    }
+	    //sum of array
+	    int sum=0;
+	    for(int i=0;i<n;i++){
+	        sum+=arr[i];
+	    }
+	    System.out.println("Sum of array:"+sum);
+	    //average 
+	    System.out.println("average of array:"+(sum/n));
+	   
+	   //to print even numbers
+	   System.out.print("Even numbers are :");
+	    for(int i=1;i<n;i=i+2){
+	        System.out.print(arr[i]+" ");
+	    }
+	    //to print odd numbers
+	    System.out.println("Odd numbers are :");
+	    for(int i=0;i<n;i=i+2){
+	        System.out.print(arr[i]+" ");
+	    }
+	   
+	   
+	   //reverse an array elments
+	   int left =0;
+	   int right=arr.length-1;
+	   while(left<right){
+	       int temp=arr[right];
+	       arr[left]=arr[right];
+	       arr[right]=temp;
+	       left++;
+	       right--;
+	   }
+	   
+	   //print the reverse array
+	   for(int num:arr){
+	       System.out.print(num+" ");
+	   }
+	}
+}
