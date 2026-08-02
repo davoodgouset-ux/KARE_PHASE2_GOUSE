@@ -403,4 +403,19 @@ public class Main
 	       System.out.print(num+" ");
 	   }
 	}
+}//hash
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		HashMap<String,Integer>ages=new HashMap<>();
+		ages.put("gouse",20);
+		ages.put("sam",38);
+		ages.put("sai",40);
+		for( String name:ages.keySet()){
+	    System.out.println(name+" "+ages.get(name));
+	}
+	}
+	
 }
