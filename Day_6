@@ -1,0 +1,23 @@
+/*
+WJP to count the no.of digits in a givn numbers
+*/
+/*
+n=2348 count =4; 
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int count=0;
+		int n=sc.nextInt();
+		while(n!=0){
+		    n/=10;
+		    count++;
+		}
+		System.out.print( " no.of digits in n : "+count);
+	}
+}
+//output
+678775
+ no.of digits in n : 6
