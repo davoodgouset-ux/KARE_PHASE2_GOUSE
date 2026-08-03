@@ -21,3 +21,146 @@ public class Main
 //output
 678775
  no.of digits in n : 6
+
+//count odd digits and even digits
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+	    int ec=0,od=0;
+	    int d;
+		while(n!=0){
+		    d=n%10;
+		    if(d%2==0){
+		        ec++;
+		    }else{
+		        od++;
+		    }
+		    n=n/10;
+		    }
+		    System.out.println("ec: "+ec+"\nod: "+od);
+	}
+}
+234567890
+ec: 5
+od: 4
+
+/****
+WJP to count the prime digits in the given number*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Sstem.out.print("Enter a number: ");
+		int n=sc.nextInt();
+		int d=0;
+		int count=0;
+	    while(n!=0){
+	        d=n%10;
+	        if(d==2 || d==3 || d==5 || d==7){
+	            count++;
+	        }
+	        n=n/10;
+	    }
+	    System.out.print("Prime digit count: "+count);
+	}
+}
+3456789
+Prime digit count: 3
+/****
+WJP to reverse a number without using right side formation*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int d;
+		int n=sc.nextInt();
+		while(n!=0){
+		    d=n%10;
+		    System.out.print(d);
+		    n=n/10;
+		}
+	}
+}
+
+Enter a number: 4567
+7654
+
+NUmber based problems 
+1.Palindrome number
+/****
+Palindrome 
+Steps:
+get a number
+store n at temp value
+reverse a number using right side formation
+compare temp an reverse number
+if both are equal print palidrome number
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int n=sc.nextInt();
+		int temp=n;
+		int ans=0;
+		int d;
+		while(n!=0){
+		    d=n%10;
+		    ans=ans*10+d;
+		    n=n/10;
+		}
+		System.out.print(ans +" ");
+		if(temp==ans){
+		    System.out.print("Palindrome");
+		}else{
+		    System.out.print("Not a Palindrome");
+		}
+	}
+}
+Enter a number: 151
+151 Palindrome
+
+/****
+Palindrome 
+Steps:
+get a number
+store n at temp value
+reverse a number using right side formation
+compare temp an reverse number
+if both are equal print palidrome number
+*/
+
+//allpalindrome  numbers from upto n  
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+		    int temp=i;
+    		int ans=0;
+    		int d;
+    		while(temp!=0){
+    		    d=temp%10;
+    		    ans=ans*10+d;
+    		    temp=temp/10;
+    		}
+    		if(i==ans){
+    		    System.out.print(i+" ");
+    		}
+		}
+	}
+}
+
+Enter a number: 55
+1 2 3 4 5 6 7 8 9 11 22 33 44 55 
