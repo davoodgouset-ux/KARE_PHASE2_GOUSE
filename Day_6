@@ -164,3 +164,55 @@ public class Main
 
 Enter a number: 55
 1 2 3 4 5 6 7 8 9 11 22 33 44 55 
+
+/**/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n=sc.nextInt();
+        int temp=n;
+        int d,ans=0;
+        while(n!=0){
+            d=n%10;
+            ans=ans+d;
+            n=n/10;
+        }
+        if(temp%ans==0){
+            System.out.print("Harshad number ");
+        }else{
+            System.out.print("NOpe not harsha number ");
+        }
+        
+	}
+}
+Enter a number: 1729
+Harshad number 
+/**/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n=sc.nextInt();
+        int temp1=0;
+        int d;
+        int square=n*n;
+        while(square!=0){
+            d=square%10;
+            temp1+=d;
+            square/=10;
+        }
+        if(temp1==n){
+            System.out.print("Neon number ");
+        }else{
+            System.out.print("Not a Neon");
+        }
+	}
+}
+
+Enter a number: 9
+Neon number 
