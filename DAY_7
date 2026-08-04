@@ -94,7 +94,6 @@ Enter first number: 1184
 Enter second number: 1210
 1184 & 1184amicable number 
 
-//amicable pair
 import java.util.*;
 public class Main{
     public static void main(String[] args){
@@ -147,6 +146,41 @@ Enter  number: 5
 5 7 9 
     }
 }
+/************
+adam Number
 
-Enter  number: 97
-prime
+*/
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		    int n=sc.nextInt();//12
+		    int sq=n*n;//12*12=144 so sq=144
+		    int ans=0,d;
+		    int temp=n;//d only removes usage //ans is having 12 to 21 so ans=21
+		    while(n!=0){
+		        d=n%10;
+		        ans=ans*10+d;//ans =21 at last
+		        n=n/10;
+		    }
+		    //System.out.println(ans+" "+sq);
+		    int revesq=ans*ans;
+		    //System.out.println(revesq);
+		    int revsqrev=0,x;
+		    while(revesq!=0){
+		        x=revesq%10;
+		        revsqrev=revsqrev*10+x;
+		        revesq=revesq/10;
+		    }
+		    //System.out.println(revsqrev);
+		    if(sq==revsqrev){
+		        System.out.print(temp+" Adams number ");
+		    }else{
+		        System.out.print(temp+" Not an Adam number ");
+		    }
+		} 
+}
+
+12
+12 Adams number 
+
