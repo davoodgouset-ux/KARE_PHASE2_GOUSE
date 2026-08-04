@@ -1,0 +1,63 @@
+/**
+Strong Number*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();//n=145;
+		int temp=n;
+		int d;
+		int fact=1,sum=0;
+		while(n!=0){
+		    fact=1;
+		    d=n%10;
+		    for(int i=1;i<=d;i++){
+		        fact=fact*i;
+		    }
+		    sum+=fact;
+		    n=n/10;
+		}if(temp==sum){
+		    System.out.print("Strong NUmber: "+sum);
+		}else{
+		    System.out.print("not  a strong number: "+sum);
+		}
+		
+	}
+}
+40585
+Strong NUmber: 40585
+
+/*
+Armstrong Number
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+	    //count digits
+	    int temp=n;
+	    int count=0,d;
+	    while(n!=0){
+	        d=n%10;
+	        count++;
+	        n=n/10;
+	    }
+	    n=temp;
+	    int sum=0;
+	    while(n!=0){
+	        d=n%10;//for every iteration new d value which is at last
+	        sum=sum+(int)Math.pow(d,count);
+	        n=n/10;
+	    }
+	    if(temp==sum){
+	        System.out.print("Armstrong number: "+sum);
+	    }else{
+	        System.out.print("Not a Armstrong number: "+sum);
+	    }
+	}
+}
+1634
+Armstrong number: 1634
