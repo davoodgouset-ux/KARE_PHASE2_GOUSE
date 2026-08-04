@@ -93,3 +93,34 @@ public class Main{
 Enter first number: 1184
 Enter second number: 1210
 1184 & 1184amicable number 
+
+//amicable pair
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter  number: ");
+        int n=sc.nextInt();
+        int flag=0;
+        if(n==1){
+            System.out.print("Neither prime not a composite");
+            return;
+        }
+        int count=0;
+        for(int i=2;i<=n/2;i++){
+            if(n%i==0){
+            count++;
+            flag=1;
+            System.out.print("Not a prime number:");
+            return;
+            }
+        }
+        if(flag==0){
+            System.out.print("prime");
+        }
+        
+    }
+}
+
+Enter  number: 97
+prime
