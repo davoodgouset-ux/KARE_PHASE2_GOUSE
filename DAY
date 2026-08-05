@@ -58,3 +58,35 @@ public class Main
 5
 1 2 3 4 5
 2 3 4 5 1 
+
+/*
+
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            int a[]=new int[n];
+            for(int i=0;i<n;i++){
+                a[i]=sc.nextInt();//input array elements
+            }
+            int max=a[0];
+            int smax=a[0];
+            for(int nums:a){
+                if(nums>max){
+                    smax=max;
+                    max=nums;//swa if we get max value -->max value to scmax ->num value is placed in max
+                }else if(nums!=max && nums>smax){//present value not be max and present value must be greate than scond max
+                    smax=nums;
+                }
+            }
+            System.out.print("max"+max+"\nsecond max"+smax);
+            
+	}
+}
+5
+1 2 3 4 5
+max5
+second max4
