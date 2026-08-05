@@ -1,0 +1,30 @@
+/*
+frequency of maximum element
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            int a[]=new int[n];
+            for(int i=0;i<n;i++){
+                a[i]=sc.nextInt();
+            }//input of elements
+            int count=1;//at starting count=1 
+            int max=a[0];//assigning max value is arr[0] checking other number 
+            for(int nums:a){//need to find max value and its frequency of higest value
+                if(nums>max){//if we find max value since its is first arr[0] value s new value and count =1
+                    max=nums;//we found out that we got new higest value so max 1
+                    count=1;
+                }else if(nums==max){//if arr[0]is max value we constantly increase count ++
+                    count++;
+                }
+            }
+            System.out.print(count);//at last increase count
+	}
+}
+
+5
+1 2 3 4 5//max is 5 so feq is its 1
+1
