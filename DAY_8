@@ -1,0 +1,84 @@
+/*******************
+create array and input the size as n 
+print all elements */
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++){
+		    arr[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++){
+		    System.out.print(arr[i]+" ");
+		}
+	}
+}
+5
+12
+123
+134
+167
+90
+12 123 134 167 90 
+/****************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		int sum=0;
+		for(int i=0;i<n;i++){
+		    System.out.print("enter "+i+"elements: ");
+		    arr[i]=sc.nextInt();
+		    sum+=arr[i];
+		}
+		System.out.print("sum is : "+sum);
+	}
+}
+
+5
+enter 0elements: 1
+enter 1elements: 2
+enter 2elements: 3
+enter 3elements: 4
+enter 4elements: 5
+sum is : 15
+
+/****************
+how many even numbers in Array
+how many odd values in array
+***********************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int evecount=0,oddcount=0;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            if(arr[i]%2==0){
+                evecount++;
+            }else{
+                oddcount++;
+            }
+        }
+        System.out.print("even count "+evecount+"\n"+"odd count : "+oddcount);
+	}
+}
+
+5
+1245
+1234
+12
+23567
+5678
+even count 3
+odd count : 2
+		
