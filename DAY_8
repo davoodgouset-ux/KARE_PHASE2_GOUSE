@@ -81,4 +81,108 @@ public class Main
 5678
 even count 3
 odd count : 2
-		
+
+//to replace an indexed array value
+import java.util.*;
+public class Arrayreplvalue
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int evecount=0,oddcount=0;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.print("Enter index value: ");
+        int m=sc.nextInt();
+        System.out.print("Enter what value you need to place in :");
+        int g=sc.nextInt();
+        arr[m]=g;
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+	}
+}
+
+5
+1
+2
+3
+4
+5
+Enter index value: 3
+Enter what value you need to place in :99
+1 2 3 99 5 
+//search an element in an array and return its index
+import java.util.*;
+public class Arraygo{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.print("Enter which elements to seach: ");
+        int f=sc.nextInt();
+        for(int i=0;i<n;i++){
+            if(arr[i]==f){
+                System.out.print(arr[i]+" found in "+i+" th index");
+                return;
+            }
+        }
+        System.out.println("Not found");
+    }
+}
+
+10
+0 1 2 3 4 5 6 7 8 9
+Enter which elements to seach: 9
+9 found in 9 th index
+//print array in reverse order
+import java.util.*;
+public class Arrayrev{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=n-1;i>=0;i--){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+5
+1 2 3 4 5
+5 4 3 2 1 
+//reverse same array elements by changing the original array 
+import java.util.*;
+public class Arrreverse{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int left,right;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+              left=0;
+              right=n-1;
+           while(left<right){
+            int temp=arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+            left++;
+            right--;
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+5
+0 1 2 3 4
+4 3 2 1 0 
