@@ -28,3 +28,33 @@ public class Main
 5
 1 2 3 4 5//max is 5 so feq is its 1
 1
+
+
+/*
+left shift by one
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            int a[]=new int[n];
+            for(int i=0;i<n;i++){
+                a[i]=sc.nextInt();//input array elements
+            }
+            int b=a[0];//preserve the first element of array in variable
+            for(int i=0;i<n-1;i++){//since java is 0 index we need to start at 0 and end at n-1
+                a[i]=a[i+1];//shifting next value into before value like i=i+1;
+            }
+            a[n-1]=b;
+            for(int i=0;i<n;i++){
+                System.out.print(a[i]+" ");
+            }
+            
+	}
+}
+
+5
+1 2 3 4 5
+2 3 4 5 1 
