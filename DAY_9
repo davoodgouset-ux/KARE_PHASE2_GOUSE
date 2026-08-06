@@ -54,3 +54,60 @@ public class Main
 5
 0 1 0 1 0
 0 0 0 1 1 
+
+/*******************************************************
+move all zeroes to at left
+******/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		int count =0;
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		    if(a[i]==1){
+		        count++;
+		    }
+		}
+		for(int i=0;i<=count;i++){
+		    a[i]=1;
+		}
+		for(int i=count;i<n;i++){
+		    a[i]=0;
+		}
+		for(int i=0;i<n;i++){
+		    System.out.print(a[i]+" ");
+		}
+	}
+}
+5
+0 1 0 1 0
+1 1 0 0 0 
+/*******************************************************
+missing number
+******/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n-1];//take upto n-1 values only 
+		int count =0;
+		for(int i=0;i<n-1;i++){//input  taking upto n-1 values
+		    a[i]=sc.nextInt();
+		}
+		int sum=0;
+		for(int i=0;i<n-1;i++){//adding sum upto n-1 balues
+		    sum+=a[i];
+		}
+		int sumn=n*(n+1)/2;//adding n*(n+1)/2 if n=5 sum is 15 so 15 which is sumn -sum
+		System.out.print(sumn-sum);
+	}
+}
+5
+1 2 4 5
+missing :3
