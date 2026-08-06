@@ -22,3 +22,35 @@ public class Main
 5
 2 4 2 4 3
 Single number is :3
+
+/*******************************************************
+moves all zeroes to at left
+******/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		int count =0;
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		    if(a[i]==0){
+		        count++;
+		    }
+		}
+		for(int i=0;i<=count;i++){
+		    a[i]=0;
+		}
+		for(int i=count;i<n;i++){
+		    a[i]=1;
+		}
+		for(int i=0;i<n;i++){
+		    System.out.print(a[i]+" ");
+		}
+	}
+}
+5
+0 1 0 1 0
+0 0 0 1 1 
