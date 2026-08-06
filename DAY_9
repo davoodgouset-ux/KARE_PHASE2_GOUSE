@@ -149,3 +149,78 @@ public class Main
 5
 0 1 0 1 2
 0 0 1 1 2 
+
+/*
+max number
+*/import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a[]={2,56,23,65,234};
+		int max=a[0];
+		for(int nums:a){
+		    if(nums>max){
+		        max=nums;
+		    }
+		}
+		System.out.print(max);
+	}
+}
+234
+
+/*
+max and scond max
+*/import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		int max=a[0];
+		int smax=a[0];
+		for(int nums:a){
+		    if(nums>max){
+		        smax=max;
+		        max=nums;
+		    }else if(nums!=smax && nums>smax){
+		        smax=nums;
+		    }
+		}
+		System.out.print(" max is "+max+"\n"+"second max"+smax);
+	}
+}
+
+5
+1 78 98 78 34 67
+max:98
+second max:78
+
+/*
+min value
+*/import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		int min=a[0];
+		for(int nums:a){
+		    if(nums<min){
+		        min=nums;
+		    }
+	}
+	System.out.print("min value: "+min);
+}
+}
+5
+1 2 3 4 5
+min value: 1
