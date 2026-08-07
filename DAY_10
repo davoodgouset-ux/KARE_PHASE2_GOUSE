@@ -122,9 +122,29 @@ Enter rows value :
 Enter colms value : 
 3
 1 2 3
-1 2   4 5 6
-6 7 8 9
+1 2 4 5 6
+6 7 8 9
 Transpose of a Matrix:
 1 4 7 
 2 5 8 
 3 6 9 
+
+/*
+lengh of a string without a inbuilt method
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int count=0;
+        for(char ch:s.toCharArray()){
+            count++;
+        }
+        System.out.print(count);
+	}
+}
+
+gouse
+5
