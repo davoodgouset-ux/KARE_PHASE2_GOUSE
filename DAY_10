@@ -171,3 +171,28 @@ public class Main
 
 hello every body welcome to my party
 7
+
+/*
+WJP to find the vowels count and consonents
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine().toUpperCase();
+        int count=0,conso=0;
+        for(char ch:s.toCharArray()){
+            if(ch== 'A'|| ch== 'E' || ch== 'I' ||ch== 'O' || ch== 'U'){
+                count++;
+            }else{
+                conso++;
+            }
+        }
+        System.out.print("vowel count"+count+"\n"+"consonents"+conso);
+	}
+}
+
+aeiouxyzpre
+vowel count5
+consonents6
