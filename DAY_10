@@ -1,0 +1,60 @@
+//2d array input print
+import java.util.*;
+public class Matrix2d{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter no.of rows: ");
+        int r=sc.nextInt();
+        System.out.print("ENter no.of columns: ");
+        int c=sc.nextInt();
+        int arr[][]=new int[r][c];
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+        
+
+    }
+}
+//sum of 2d array elemnts
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter no.of rows: ");
+        int r=sc.nextInt();
+        System.out.print("ENter no.of columns: ");
+        int c=sc.nextInt();
+        int arr[][]=new int[r][c];
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }int sum=0;
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                sum=sum+arr[i][j];
+            }
+        }
+        System.out.print("Sum of array elements is: "+sum);
+    }
+}
+Enter no.of rows: 3
+ENter no.of columns: 3
+1
+2
+3
+4
+5
+6
+7
+8
+0
+Sum of array elements is: 36
