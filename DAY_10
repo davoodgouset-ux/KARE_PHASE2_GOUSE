@@ -196,3 +196,26 @@ public class Main
 aeiouxyzpre
 vowel count5
 consonents6
+
+/*
+WJP to rverse a string
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        char ch[]=str.toCharArray();
+        int s=0;
+        int e=ch.length -1;
+        while(s<e){
+            char temp=ch[s];
+            ch[s]=ch[e];
+            ch[e]=temp;
+            s++;
+            e--;
+        }
+        System.out.print(new String(ch));
+	}
+}
