@@ -219,3 +219,26 @@ public class Main
         System.out.print(new String(ch));
 	}
 }
+
+poooop
+Palindrome :poooop
+/*
+palindrome
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    String rev="";
+    for(int i=str.length()-1;i>=0;i--){
+        rev+=str.charAt(i);
+    }
+    if(str.equals(rev)){
+        System.out.print("Palindrome "+str);
+    }else{
+        System.out.print("Not a Palindrome "+str);
+    }
+    }
+}
