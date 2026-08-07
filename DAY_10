@@ -148,3 +148,26 @@ public class Main
 
 gouse
 5
+
+/*
+how many words are there in sentences
+//logic get to know about spaces then +1 for count 
+*/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        int count=0;
+        for(char ch:s.toCharArray()){
+            if(ch==' '){
+                count++;
+            }
+        }
+        System.out.print(count+1);
+	}
+}
+
+hello every body welcome to my party
+7
