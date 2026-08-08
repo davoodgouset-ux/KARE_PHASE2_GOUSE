@@ -469,3 +469,27 @@ Enter the size of array: 10
 1 2 3 4 5 6 7 8 9 99
 Enter the target value :99
 Target found at index 9
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str1=sc.nextLine();
+        //String str2=sc.nextLine();
+        HashMap<Character,Integer>map1=new HashMap<>();
+        HashMap<Character,Integer>map2=new HashMap<>();
+        for(char ch:str1.toCharArray()){
+            map1.put(ch,map1.getOrDefault(ch,0)+1);
+        }
+        for(char ch:map1.keySet()){
+            if(map1.get(ch)==1)
+            System.out.print(ch);
+        }
+         for(Integer ch:map1.values()){
+            System.out.print(ch);
+        }
+	}
+}
+anagram
+rgmn31111
