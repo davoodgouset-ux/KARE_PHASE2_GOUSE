@@ -28,3 +28,27 @@ public class Main
  arr[]={-1,0,3,9,12,23,27,29,31,40,68};
 target=40;
 Target found at index : 9
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int arr[]={-1,0,3,9,12,2,68};
+        int n=arr.length-1;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n-i-1;j++){//at 0 iteration we fix the last value already so we dont need to sort last element final 
+                if(arr[j]>arr[j+1]){//so for every iteration we do not need to check for last iteration
+                    int temp=arr[j];//here j is loop is for how many times we need to sort for entire array elments range
+                    arr[j]=arr[j+1];//here i loop is for for every loop we need to check the inner element values fo that i loop
+                    arr[j+1]=temp;
+                }
+            }
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+        
+}
+}
+-1 0 2 3 9 12 
