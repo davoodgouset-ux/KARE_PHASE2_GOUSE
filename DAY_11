@@ -1,0 +1,30 @@
+//Binar search
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int arr[]={-1,0,3,9,12,23,27,29,31,40,68};
+        int target=40;
+        int low=0;
+        int flag=0;
+        int high=arr.length-1;
+        while(low<=high){
+            int mid=low+(high-low)/2;
+            if(arr[mid]==target){
+                System.out.print("Target found at index : "+mid);
+                flag=1;
+                break;
+        }else if(target>arr[mid]){
+            low=mid+1;
+        }else{
+            high=mid-1;
+        }
+	}if(flag==0){
+	System.out.print("Target not found in array ");
+	}
+}
+}
+ arr[]={-1,0,3,9,12,23,27,29,31,40,68};
+target=40;
+Target found at index : 9
