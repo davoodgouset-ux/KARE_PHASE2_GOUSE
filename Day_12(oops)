@@ -1,10 +1,12 @@
+inheritance concept using extends keyword
 import java.util.*;
 public class Main
 {
 	public static void main(String[] args) {
-        //Scanner sc=new Scanner(System.in);
         //single inheritance
-        //lets take two classes
+        //multi inheritance
+        //hybrid inheritance
+        //lets take three classes
         Son sn = new Son();
         sn.gen1();
         sn.gen2();
