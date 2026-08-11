@@ -43,3 +43,43 @@ Diamond
 Money
 Gold
 Money
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        //single inheritance
+        //multi inheritance
+        //hybrid inheritance
+        //lets take three classes
+        Son sn = new Son();
+        sn.gen31();
+        sn.gen2();
+        Daughter Dh=new Daughter();
+        Dh.gen2();
+        Dh.gen3();
+        Father Fa=new Father();
+        Fa.gen2();
+        
+	}
+	 //father
+	 static class Father{
+	     void gen2(){//we can have a same method in separate classes
+	         System.out.print("Gold");
+	     }
+	 }
+	static class Son extends Father{
+	    void gen31(){
+	        System.out.print("Diamond\n");
+	    }
+	}
+	static class Daughter extends Father{
+	    void gen3(){
+	        System.out.print("Platinum\n");
+	    }
+	}
+}
+
+Diamond
+GoldGoldPlatinum
+Gold
