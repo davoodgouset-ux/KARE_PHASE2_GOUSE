@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        //Scanner sc=new Scanner(System.in);
+        //single inheritance
+        //lets take two classes
+        Son sn = new Son();
+        sn.gen1();
+        sn.gen2();
+        sn.gen3();
+        Father fa = new Father();
+        fa.gen1();
+        fa.gen2();
+        Grandfather gf=new Grandfather();
+       gf.gen1();
+        
+	}
+	 //father
+	 static class Grandfather{
+	     void gen1(){
+	         System.out.print("Money\n");
+	     }
+	 }
+	static class Father extends Grandfather{
+	    void gen2(){
+	        System.out.print("Gold\n");
+	    }
+	}
+	static class Son extends Father{
+	    void gen3(){
+	        System.out.print("Diamond\n");
+	    }
+	}
+}
+
+outpt:
+Money
+Gold
+Diamond
+Money
+Gold
+Money
