@@ -191,3 +191,46 @@ Its a power of 2
 Its a power of 2
 Its a power of 2
 Not a power of 2
+
+/*//automorphic number
+get input user n=5;
+find square of value
+to count number of digits
+to find power of the value pow(value,power value)
+square%power==n then this is automorphic number 
+else not a automorphic number 
+*/
+import java.util.*;
+public class Main
+{
+    boolean  Automorphic(){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int squ=n*n;
+        int temp=n;
+        int count=0;
+        while(n!=0){
+            n=n/10;
+            count++;
+            
+        }int pow=(int)Math.pow(10,count);
+        if(squ%pow==temp){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+	public static void main(String[] args) {
+    Main n=new Main();
+    boolean ans=n.Automorphic();
+    if(ans){
+        System.out.print("Automorphic number");
+        return;
+    }
+    System.out.print("Not an Automorphic number");
+	}
+}
+output:
+8
+Not an Automorphic number
