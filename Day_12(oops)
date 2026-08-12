@@ -150,3 +150,44 @@ public class Main
 outpuy:
 9
 Perfect Number
+
+
+//Wjp to check a number is power of 2 or not 
+//with parameter and no return type
+
+import java.util.*;
+public class Main
+{
+    
+    static void powerof2(int a){//variable name can be changed what ever we want but datatype must be same
+        while(a%2==0){
+            a=a/2;
+        }
+        if(a==1){
+            System.out.println("Its a power of 2");
+        }else{
+            System.out.println("Not a power of 2");
+        }
+        
+    }
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    //int n=sc.nextInt();//if we want we pass by user input
+    powerof2(4);
+    powerof2(8);
+    powerof2(16);
+    powerof2(89);
+    
+	}
+}
+/*
+2^0=1
+2^1=2 2/2=1
+2^3 =8 8/2=4 4/2=2 2/2=1
+2^4 =16 16/2=8 8/2=4 4/2=2 2/2=1
+at last remainder should be always 1;
+*/
+Its a power of 2
+Its a power of 2
+Its a power of 2
+Not a power of 2
