@@ -333,3 +333,44 @@ public class Main{
 2
 3
 8
+
+/*
+inheritance
+*/
+public class Main
+{
+    static class ClassA{
+        void bloodA(){
+            System.out.println("A+ve");
+        }
+    }
+    static class ClassB extends ClassA{
+        void bloodb(){
+            System.out.println("b+ve");
+        }
+    }
+    static class Classc extends ClassB{
+        void bloodc(){
+            System.out.println("c+ve");
+        }
+    }
+    static class ClassD extends Classc{
+        void bloodd(){
+            System.out.println("d+ve");
+        }
+    }
+    
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		ClassD yup=new ClassD();
+		yup.bloodd();
+		yup.bloodc();
+		yup.bloodb();
+		yup.bloodA();
+	}
+}
+
+d+ve
+c+ve
+b+ve
+A+ve
