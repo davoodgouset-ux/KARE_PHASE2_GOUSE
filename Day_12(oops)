@@ -266,3 +266,40 @@ public class Main{
 output:
 13
 Not a perfect number
+
+/*find average for only the values
+even and divisble by 3
+5
+2 4 6 18 24
+*/
+import java.util.*;
+ 
+    
+public class Main{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Size of array: ");
+        int n=sc.nextInt();
+        System.out.print("Enter elements");
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int sum=0;
+        int count=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]%3==0 && arr[i]%2==0){
+                count++;
+                sum+=arr[i];
+            }
+        }
+        System.out.print("The sum of number both divisible by 3 and even number is ");
+        float average=sum/count;
+        System.out.printf("%.2f",average);
+        
+        
+    }
+}
+Size of array: 5
+Enter elements2 4 6 18 24
+The sum of number both divisible by 3 and even number is 16.00
