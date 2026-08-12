@@ -234,3 +234,35 @@ public class Main
 output:
 8
 Not an Automorphic number
+
+/*
+WJP to checkperfect cube or not 
+*/
+import java.util.*;
+ 
+    
+public class Main{
+    boolean  perfectcube(int n){
+        for(int i=0;i<=n/2;i++){
+            if(i*i*i==n){
+                return true;
+            }
+        }
+       return false;
+        }
+       
+	public static void main(String[] args) {
+    Main n=new Main();
+    Scanner sc=new Scanner(System.in);
+    int m=sc.nextInt();
+    boolean ans=n.perfectcube(m);
+    if(ans){
+        System.out.print("Perfect cube");
+    }else{
+        System.out.print("Not a perfect number");
+    }
+    }
+}
+output:
+13
+Not a perfect number
