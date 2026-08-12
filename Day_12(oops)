@@ -303,3 +303,33 @@ public class Main{
 Size of array: 5
 Enter elements2 4 6 18 24
 The sum of number both divisible by 3 and even number is 16.00
+
+/*
+find the power of given number without inbuilt method 
+function with parameters and and return Type
+*/
+import java.util.*;
+ 
+    
+public class Main{
+    int powerofn(int num,int pow){
+        int sum=1;
+        for(int i=1;i<=pow;i++){
+	        sum*=num;
+	    }
+	    return sum;
+    }
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int num=sc.nextInt();
+	    int pow=sc.nextInt();
+	    Main m=new Main();
+	    int ans=m.powerofn(num,pow);
+	    System.out.print(ans);
+    }
+    
+}
+
+2
+3
+8
