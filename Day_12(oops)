@@ -83,3 +83,41 @@ public class Main
 Diamond
 GoldGoldPlatinum
 Gold
+
+import java.util.*;
+class GrandFather{
+    void gen1(){
+        System.out.print("Money\n");
+    }
+}
+class Father extends GrandFather{
+    void gen21(){
+        System.out.print("GOld\n");
+    }
+}
+class Mother extends Father{
+    void gen22(){
+        System.out.print("Silver\n");
+    }
+}
+class Son extends Father{
+    void gen3(){
+        System.out.print("Diamond\n");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+        Son s= new Son();
+        s.gen1();
+        s.gen21();
+        s.gen3();
+        Mother m=new Mother();
+        m.gen22();
+	}
+}
+
+Money
+GOld
+Diamond
+Silver
