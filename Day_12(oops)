@@ -374,3 +374,88 @@ d+ve
 c+ve
 b+ve
 A+ve
+
+
+TAIL RECURSION
+//TAIL RECURSION 
+import java.util.*;
+public class Main
+{
+    static void fun(int n){
+        if(n!=0){
+            System.out.print(n+" ");
+            fun(n-1);
+        }
+    }
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    fun(n);
+	}
+}
+OUTPUT
+9
+9 8 7 6 5 4 3 2 1 
+
+HEAD RECURSION
+//HEAD RECURSION 
+import java.util.*;
+public class Main
+{
+    static void fun(int n){
+        if(n!=0){
+            fun(n-1);
+            System.out.print(n+" ");
+            
+        }
+    }
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    fun(n);
+	}
+}
+
+9
+1 2 3 4 5 6 7 8 9 
+//FACTORIAL OPTIMIZED WAY
+import java.util.*;
+public class Main{
+    static int fact(int n){
+        int fact=1;
+        if(n==0 || n==1)
+        return 1
+        return n*fact(n-1);//multilying with value and also function call with fact(n-1)
+        //ANS IS STORED IN CONTAINER OF ANS
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int ans=fact(n);
+        System.out.print(ans);
+    }
+}
+5
+120
+
+//FACTORIAL  RECURSION 
+import java.util.*;
+public class Main
+{
+    static int  fact(int n){
+        int fact=1;
+        if(n!=0){
+        fact=n*fact(n-1);
+        }
+        return fact;
+        
+    }
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int ans=fact(n);
+    System.out.print(ans);
+	}
+}
+5
+120
