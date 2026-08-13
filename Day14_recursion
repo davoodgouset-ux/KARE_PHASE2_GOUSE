@@ -47,3 +47,24 @@ class Student{
 }
 output:
 0 null
+
+//parameterized constructor
+import java.util.*;
+class Student{
+        int rollno;
+        String name;
+        Student(int r,String n){
+            this.rollno=r;
+            this.name=n;
+        }
+        void Display(){
+            System.out.print(rollno+" "+name);
+        }
+    public static void main(String[] args){
+        Student s = new Student(60,"gouse"); 
+        Student m=new Student(12,"GOuse");
+        m.Display();
+        s.Display();
+    }
+}
+12 GOuse60 gouse
