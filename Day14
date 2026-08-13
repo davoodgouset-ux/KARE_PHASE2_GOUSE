@@ -120,3 +120,30 @@ public class Main
 1
 1
 sum of two values2Sum of three values3
+
+//polymorphism method overloading
+//call methods by differnt parameters
+import java.util.*;
+public class Main
+{
+    void print(int a,float b){
+        System.out.println(a+" "+b);
+    }
+    void print(int a ,float  b,int c){
+        System.out.println(a+" "+b+" "+(char)c);
+    }
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        float b=sc.nextFloat();
+        char c=sc.next().charAt(0);
+        Main m= new Main();
+        m.print(a,b);
+        m.print(a,b,c);
+	}
+}
+output:
+7
+9.9
+G
+7 9.97 9.9 G
