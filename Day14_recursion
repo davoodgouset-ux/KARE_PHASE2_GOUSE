@@ -31,7 +31,7 @@ class Bike{
     public static void main(String[] args){
         Bike obj=new Bike();
     }
-}
+}//output
 Bike has Started
 
 class Student{
