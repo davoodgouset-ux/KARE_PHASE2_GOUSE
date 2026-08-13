@@ -33,3 +33,17 @@ class Bike{
     }
 }
 Bike has Started
+
+class Student{
+    
+        int roolno;
+        String name;
+        Student(){
+            System.out.print(roolno+" "+name);
+    }
+    public static void main(String[] args){
+        Student s=new Student();
+    }
+}
+output:
+0 null
