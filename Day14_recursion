@@ -21,3 +21,15 @@ public class Main
 output:
 10
 fibnoci series for upto n value 89
+
+//No argument constructor
+import java.util.*;
+class Bike{
+    Bike(){
+        System.out.print("Bike has Started");
+    }
+    public static void main(String[] args){
+        Bike obj=new Bike();
+    }
+}
+Bike has Started
