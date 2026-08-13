@@ -68,3 +68,27 @@ class Student{
     }
 }
 12 GOuse60 gouse
+
+//parametrized constructor
+import java.util.*;
+class Student{
+    int rollno;
+    String name;
+    Student(int r,String n){
+        this.rollno=r;
+        this.name=n;
+    }
+    Student(Student obj){
+        obj.rollno=21;
+    }
+    void display(){
+        System.out.println(rollno+" "+name);
+    }
+    public static void main(String[] args){
+        Student po = new Student(90,"Gouse");
+        Student ps=new Student(po);
+        po.display();
+    }
+}
+output:
+21 Gouse
