@@ -92,3 +92,31 @@ class Student{
 }
 output:
 21 Gouse
+
+//polymorphism method overloading
+//call methods by differnt parameters
+import java.util.*;
+public class Main
+{
+    static void add(int a,int b){
+        System.out.print(a+b);
+    }
+    static void add(int a ,int b,int c){
+        System.out.print(a+b+c);
+    }
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        System.out.println("sum of two values");
+        add(a,b);
+        System.out.println("Sum of three values");
+        add(a,b,c);
+	}
+}
+//output:
+1
+1
+1
+sum of two values2Sum of three values3
