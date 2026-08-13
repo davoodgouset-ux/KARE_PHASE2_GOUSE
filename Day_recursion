@@ -1,0 +1,23 @@
+/*
+WjP to print nth term of fibnoci seriesusing recursion
+*/
+import java.util.*;
+public class Main
+{
+    static int fib(int n){
+        if(n<=1){
+            return 1;
+        }
+        return fib(n-1)+fib(n-2);
+        
+    }
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int ans=fib(n);
+	System.out.print("fibnoci series for upto n value "+ans);
+		}
+}
+output:
+10
+fibnoci series for upto n value 89
