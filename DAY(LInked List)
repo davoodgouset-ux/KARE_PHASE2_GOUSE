@@ -1,0 +1,179 @@
+//display linkedlist
+import java.util.*;
+class Node {
+	int data;
+	Node next;
+	Node(int d) {
+		this.data=d;
+		this.next=null;
+	}
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int d=sc.nextInt();
+		Main m=new Main();
+		while(d!=-1) {
+			m.insert(d);
+			d=sc.nextInt();
+		}
+		m.display();
+	}
+	Node first;
+	void insert(int d)
+	{
+		Node n=new Node(d);
+		if(first==null)
+			{first=n;
+			return;}
+	
+		else {
+					Node temp=first;
+			while(temp.next!=null) {
+				temp=temp.next;
+			}
+			temp.next=n;
+		}
+	}
+	void display() 
+	{
+		if(first==null)
+		{
+			System.out.println("List is empty");
+			return;
+		}
+		Node temp=first;
+		while(temp!=null) 
+		{
+			System.out.print(temp.data+" ");
+			temp=temp.next;
+		}
+	}
+
+}
+//output
+1 2 3 -1
+1 2 3 
+//sum of linked lisst
+
+import java.util.*;
+class Node {
+	int data;
+	Node next;
+	Node(int d) {
+		this.data=d;
+		this.next=null;
+	}
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int d=sc.nextInt();
+		Main m=new Main();
+		while(d!=-1) {
+			m.insert(d);
+			d=sc.nextInt();
+		}
+		m.display();
+	}
+	Node first;
+	void insert(int d)
+	{
+		Node n=new Node(d);
+		if(first==null)
+			{first=n;
+			return;}
+	
+		else {
+					Node temp=first;
+			while(temp.next!=null) {
+				temp=temp.next;
+			}
+			temp.next=n;
+		}
+	}
+	void display() 
+	{
+		if(first==null)
+		{
+			System.out.println("List is empty");
+			return;
+		}
+		Node temp=first;
+		int sum=0;
+		while(temp!=null) 
+		{
+		    sum=sum+temp.data;
+			temp=temp.next;
+		}
+		System.out.print(sum);
+	}
+}
+//output:
+1 2 3 4 -1
+10
+
+
+import java.util.*;
+class Node {
+	int data;
+	Node next;
+	Node(int d) {
+		this.data=d;
+		this.next=null;
+	}
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int d=sc.nextInt();
+		Main m=new Main();
+		while(d!=-1) {
+			m.insert(d);
+			d=sc.nextInt();
+		}
+		m.display();
+	}
+	Node first;
+	void insert(int d)
+	{
+		Node n=new Node(d);
+		if(first==null)
+			{first=n;
+			return;}
+	
+		else {
+			Node temp=first;
+			while(temp.next!=null) {
+				temp=temp.next;
+			}
+			temp.next=n;
+		}
+	}
+	void display() 
+	{
+		if(first==null)
+		{
+			System.out.println("List is empty");
+			return;
+		}
+		int max=first.data;
+		Node temp=first;
+		while(temp!=null) 
+		{
+		    if(temp.data>max){
+		        max=temp.data;
+		    }
+			temp=temp.next;
+		}
+		System.out.print("\nmaximim number in linked list is :"+max);
+	}
+
+}
+//output:
+1 2 3 4 99 -1
+
+maximim number in linked list is :99
