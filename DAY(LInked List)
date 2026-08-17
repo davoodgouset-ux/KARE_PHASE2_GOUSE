@@ -241,3 +241,140 @@ public class Main
 }//output:
 1 2 3 4 5 6 7 8 9 -1
 maximim number in linked list is :9
+
+//min value
+
+import java.util.*;
+class Node {
+	int data;
+	Node next;
+	Node(int d) {
+		this.data=d;
+		this.next=null;
+	}
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int d=sc.nextInt();
+		Main m=new Main();
+		while(d!=-1) {
+			m.insert(d);
+			d=sc.nextInt();
+		}
+		m.minelement();
+	}
+	Node first;
+	void insert(int d)
+	{
+		Node n=new Node(d);
+		if(first==null)
+			{first=n;
+			return;}
+	
+		else {
+			Node temp=first;
+			while(temp.next!=null) {
+				temp=temp.next;
+			}
+			temp.next=n;
+		}
+	}
+	void minelement() 
+	{
+	    int min=Integer.MAX_VALUE;
+		if(first==null)
+		{
+			System.out.println("List is empty");
+			return;
+		}
+		//int max=first.data;
+		Node temp=first;
+		while(temp!=null) 
+		{
+		    if(temp.data<min){
+		        min=temp.data;
+		    }
+			temp=temp.next;
+		}
+		System.out.print("\nmaximim number in linked list is :"+min);
+	}
+
+}//output:
+1 2 3 4 -1
+maximim number in linked list is :1
+
+//linear search of linked list
+import java.util.*;
+class Node {
+	int data;
+	Node next;
+	Node(int d) {
+		this.data=d;
+		this.next=null;
+	}
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int d=sc.nextInt();
+		Main m=new Main();
+		while(d!=-1) {
+			m.insert(d);
+			d=sc.nextInt();
+		}int target=sc.nextInt();//taking input for target
+		m.searchanelelement(target);//passing target value
+	}
+	Node first;
+	void insert(int d)
+	{
+		Node n=new Node(d);
+		if(first==null)
+			{first=n;
+			return;}
+	
+		else {
+			Node temp=first;
+			while(temp.next!=null) {
+				temp=temp.next;
+			}
+			temp.next=n;
+		}
+	}
+	void searchanelelement(int target) //taking target as a parameter
+	{
+		if(first==null)
+		{
+			System.out.println("List is empty");
+			return;
+		}
+		//int max=first.data;
+		Node temp=first;
+		int count=1;
+		int flag=0;
+		while(temp!=null) 
+		{
+		    if(temp.data==target){//temp
+		        System.out.print("it is at index of "+count+ " and "+ temp.data+"(target)");
+		        flag=1;
+		        break;
+		    }
+		    count++;
+			temp=temp.next;
+		}
+		if(flag==0){
+		    System.out.print("Element not found");
+		}
+	}
+
+}
+//testcase 1
+1 2 4 5 -1
+8
+Element not found
+//testcase 2
+1 2 3 4 5 -1
+5
+it is at index of 5 and 5(target)
