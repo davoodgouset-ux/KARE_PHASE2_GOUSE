@@ -177,3 +177,67 @@ public class Main
 1 2 3 4 99 -1
 
 maximim number in linked list is :99
+
+
+//USING Integer.MIN_VALUE
+
+import java.util.*;
+class Node {
+	int data;
+	Node next;
+	Node(int d) {
+		this.data=d;
+		this.next=null;
+	}
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int d=sc.nextInt();
+		Main m=new Main();
+		while(d!=-1) {
+			m.insert(d);
+			d=sc.nextInt();
+		}
+		m.maxelement();
+	}
+	Node first;
+	void insert(int d)
+	{
+		Node n=new Node(d);
+		if(first==null)
+			{first=n;
+			return;}
+	
+		else {
+			Node temp=first;
+			while(temp.next!=null) {
+				temp=temp.next;
+			}
+			temp.next=n;
+		}
+	}
+	void maxelement() 
+	{
+	    int max=Integer.MIN_VALUE;
+		if(first==null)
+		{
+			System.out.println("List is empty");
+			return;
+		}
+		//int max=first.data;
+		Node temp=first;
+		while(temp!=null) 
+		{
+		    if(temp.data>max){
+		        max=temp.data;
+		    }
+			temp=temp.next;
+		}
+		System.out.print("\nmaximim number in linked list is :"+max);
+	}
+
+}//output:
+1 2 3 4 5 6 7 8 9 -1
+maximim number in linked list is :9
