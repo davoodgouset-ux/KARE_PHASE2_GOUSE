@@ -165,3 +165,34 @@ public class Main
 5
 2
 17 5 2 
+//third largest
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int a[]=new int[n];
+    for(int i=0;i<n;i++){
+        a[i]=sc.nextInt();
+    }
+    int first=a[0];
+    int second=Integer.MIN_VALUE;
+    int third=Integer.MIN_VALUE;
+    for(int nums:a){
+        if(nums>first){
+            third=second;
+            second=first;
+            first=nums;
+        }
+        else if(nums>second && nums!=first){
+            third=second;
+            second=nums;
+        }
+        
+    }
+    for(int i=0;i<n;i++){
+        System.out.print(second+" ");
+    }
+	}
+}
