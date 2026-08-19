@@ -326,3 +326,49 @@ public class Main{
 7
 2 2 2 1 1 1 2 2
 2 :is majority element
+
+// majority element boyre more
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        int candidate=0;
+        int count=0;
+        for(int i=0;i<n;i++){
+            if(count==0){
+            candidate=a[i];
+            }
+            if(a[i]==candidate){
+                count++;
+            }
+            else{
+                count--;
+            }
+            
+        }
+        int verify=0;
+        for(int i=0;i<n;i++){
+            if(a[i]==candidate){
+                verify++;
+            }
+        }
+        if(verify>n/2){
+            System.out.print("Majority element"+candidate);
+        }
+        else{
+            System.out.print("No number is Majority lement");
+        }
+    }
+}
+
+7
+1 2 3 4 5 6 7
+No number is Majority lement
+7
+2 2 1 1 1  2 2
+Majority element 2
