@@ -104,7 +104,7 @@ Under flow
 Invalid4
 56 89 90 5
 Exit
-
+//queue with array
 import java.util.*;
 class Queue{
     int front,rear;
