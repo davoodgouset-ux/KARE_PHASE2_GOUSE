@@ -1,0 +1,106 @@
+import java.util.*;
+class Stack {
+	int top;
+	int arr[];
+	int n;
+	Stack(int n) {
+		this.n=n;
+		this.top=-1;
+		arr = new int[n];
+	}
+	void push(int d) {
+		if(top==n-1) {
+			System.out.print("Over flow");
+			return;
+		}
+		arr[++top]=d;
+		return;
+	}
+	void pop() {
+		if(top==-1) {
+			System.out.print("Under flow");
+			return;
+		}
+		System.out.print(arr[top--]);
+		return;
+	}
+	void peek() {
+		if(top==-1) {
+			System.out.println("Under flow");
+			return;
+		}
+		System.out.print(arr[top]);
+		return;
+	}
+	void display() {
+		if(top==-1) {
+			System.out.println("Stack is empty");
+			return;
+		}
+		for(int i=top; i>=0; i--) {
+			System.out.print(arr[i]+" ");
+		}
+		return;
+	}
+}
+class Main {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		Stack s = new Stack(n);
+		System.out.println("1.push");
+		System.out.println("2.pop");
+		System.out.println("3.peek");
+		System.out.println("4.display");
+		System.out.println("5.exit");
+		System.out.println("Enter a choice");
+		while(true) {
+		    int a=sc.nextInt();
+			switch(a) {
+			case 1: {
+				int d=sc.nextInt();
+				s.push(d);
+				break;
+			}
+			case 2: {
+				s.pop();
+				break;
+			}
+			case 3: {
+				s.peek();
+				break;
+			}
+			case 4: {
+				s.display();
+				break;
+			}
+			case 5: {
+				System.out.println("Exit");
+				return;
+			}
+			default:
+				System.out.print("Invalid");
+			}
+		}
+	}
+}
+//output:
+5
+1.push
+2.pop
+3.peek
+4.display
+5.exit
+Enter a choice
+3
+Under flow
+1
+90
+1
+89
+1
+56
+167
+Invalid4
+56 89 90 5
+Exit
