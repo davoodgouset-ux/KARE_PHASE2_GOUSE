@@ -104,3 +104,165 @@ Under flow
 Invalid4
 56 89 90 5
 Exit
+
+import java.util.*;
+class Queue{
+    int front,rear;
+    int n;
+    int queue[];
+    Queue(int n){
+        this.n=n;
+        queue=new int[n];
+        front=0;
+        rear=-1;
+    }
+    void enqueue(int data){
+        if(rear==n-1){
+            System.out.println("Queue is full");
+            return;
+        }
+        rear++;
+        queue[rear]=data;
+    }
+    int dequeue(){
+        if(front >front){
+            System.out.print("Queue is empty");
+            return -1;
+        }
+        return queue[front++];
+    }
+    void display(){
+        if(front>rear){
+            System.out.println("Queue is empty");
+            return;
+        }
+        for(int i=front;i<=rear;i++){
+            System.out.print(queue[i]+" ");
+        }
+        System.out.println();
+        return;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        Queue q=new Queue(n);
+        while(true){
+            System.out.println("\n1.enqueue");
+            System.out.println("\n2.dequeue");
+            System.out.println("\n3.display");
+            System.out.println("\n4.exit");
+            int s=sc.nextInt();
+            switch(s){
+                case 1:{
+                    int b=sc.nextInt();
+                    q.enqueue(b);
+                    break;
+                }
+                case 2:{
+                    q.dequeue();
+                    break;
+                }
+                case 3:{
+                    q.display();
+                    break;
+                }
+                case 4:{
+                    return;
+                }
+                default:
+                System.out.println("invalid credentials");
+            }
+            
+        }
+    }
+}//output:
+5
+
+1.enqueue
+
+2.dequeue
+
+3.display
+
+4.exit
+1
+1
+
+1.enqueue
+
+2.dequeue
+
+3.display
+
+4.exit
+1
+2
+
+1.enqueue
+
+2.dequeue
+
+3.display
+
+4.exit
+1
+2 3
+
+1.enqueue
+
+2.dequeue
+
+3.display
+
+4.exit
+1
+4
+
+1.enqueue
+
+2.dequeue
+
+3.display
+
+4.exit
+1
+5
+
+1.enqueue
+
+2.dequeue
+
+3.display
+
+4.exit
+3
+1 2 3 4 5 
+
+1.enqueue
+
+2.dequeue
+
+3.display
+
+4.exit
+2
+
+1.enqueue
+
+2.dequeue
+
+3.display
+
+4.exit
+3
+2 3 4 5 
+
+1.enqueue
+
+2.dequeue
+
+3.display
+
+4.exit
