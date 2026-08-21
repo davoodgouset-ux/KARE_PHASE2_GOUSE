@@ -33,3 +33,28 @@ public class Main
 1 0 0 0 0 
 0 1 0 0 0 
 0 1 0 0 0 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int V=sc.nextInt();
+    int E=sc.nextInt();
+    int adj[][]=new int[V][V];
+    int deg[] = new int[V];
+    for(int i=0;i<E;i++){
+        int u=sc.nextInt();
+        int v=sc.nextInt();
+        adj[u][deg[u]++]=v;
+        adj[v][deg[v]++]=u;
+    }
+    for(int i=0;i<V;i++){
+        System.out.print(i+": ");
+        for(int j=0;j<deg[i];j++){
+            System.out.print(adj[i][j]+" ");
+        }
+        System.out.println();
+    }
+	}
+}
