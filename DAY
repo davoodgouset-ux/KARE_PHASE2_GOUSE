@@ -372,3 +372,25 @@ No number is Majority lement
 7
 2 2 1 1 1  2 2
 Majority element 2
+//int bin->Str->int
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    int n=900;
+    StringBuilder str=new StringBuilder();
+    while(n!=0){
+        int rem=n%2;
+        if(rem!=0){
+        str.insert(0,rem);
+        }
+        n=n/2;
+    }
+    System.out.println(str);
+    int decimalInt = Integer.parseInt(String.valueOf(str), 2);
+    System.out.println(decimalInt);
+	}
+}
+//output:
+1111
+585
