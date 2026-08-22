@@ -120,3 +120,50 @@ public class Main
 5
 90 89 67 56 45
 [90, 89, 67, 56, 45]
+//stack operations
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+    Stack obj=new Stack();
+    obj.push(10);
+    obj.push(20);
+    obj.push(89);
+    System.out.println(obj.pop());
+    System.out.println(obj);
+    int n=sc.nextInt();
+    for(int i=0;i<n;i++){
+        obj.add(sc.nextInt());
+    }
+    System.out.println(obj);
+	System.out.println(obj.peek());
+	System.out.println(obj.empty());
+	System.out.println(obj.search(20));
+	obj.add(20);
+	System.out.println(obj);
+	System.out.println(obj);
+	System.out.println(obj.get(2));
+	obj.set(1,9999);
+	System.out.println(obj);
+	System.out.println(obj.contains(9999));
+	System.out.println(obj.remove(1));
+	}
+	
+}
+//output:
+489
+[10, 20]
+
+1 2 3 4
+[10, 20, 1, 2, 3, 4]
+4
+false
+5
+[10, 20, 1, 2, 3, 4, 20]
+[10, 20, 1, 2, 3, 4, 20]
+1
+[10, 9999, 1, 2, 3, 4, 20]
+true
+9999
+
