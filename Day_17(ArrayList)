@@ -101,3 +101,22 @@ Enter index value
 Enter value
 768
 [2, 2, 6666, 768]
+//looping on input for LL inputs
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+    LinkedList obj=new LinkedList();
+    int n=sc.nextInt();
+    for(int i=0;i<n;i++){
+    obj.add(sc.nextInt());
+	}
+	System.out.print(obj);
+	}
+	
+}
+//output:
+5
+90 89 67 56 45
+[90, 89, 67, 56, 45]
