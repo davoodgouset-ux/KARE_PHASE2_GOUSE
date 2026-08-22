@@ -52,3 +52,81 @@ public class Main
 }
 }
 -1 0 2 3 9 12 
+
+// Write a Java program to find the smallest element in an array
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int min = arr[0];
+
+        for (int i = 1; i < n; i++) {
+
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+
+        System.out.println("Smallest element is " + min);
+    }
+}
+
+Output:
+7
+25 10 45 3 18 60 12
+Smallest element is 3
+
+
+// Write a Java program to search for a target element in an array using Linear Search
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int target = sc.nextInt();
+
+        int position = -1;
+
+        for (int i = 0; i < n; i++) {
+
+            if (arr[i] == target) {
+                position = i;
+                break;
+            }
+        }
+
+        if (position != -1) {
+            System.out.println("Element found at position " + position);
+        }
+        else {
+            System.out.println("Element not found");
+        }
+    }
+}
+
+Output:
+7
+25 10 45 60 12 30 50
+30
+Element found at position 5
