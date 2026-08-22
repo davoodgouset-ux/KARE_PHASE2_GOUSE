@@ -167,3 +167,164 @@ false
 true
 9999
 
+ Add and Display Unique Elements
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Set<Integer> obj = new HashSet<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.add(s.nextInt());
+        }
+
+        System.out.println("Set: " + obj);
+    }
+}
+2. Search an Element in Set
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Set<Integer> obj = new HashSet<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.add(s.nextInt());
+        }
+
+        System.out.print("Enter element to search: ");
+        int key = s.nextInt();
+
+        if (obj.contains(key)) {
+            System.out.println("Element is present");
+        } else {
+            System.out.println("Element is not present");
+        }
+    }
+}
+3. Remove an Element from Set
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Set<Integer> obj = new HashSet<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.add(s.nextInt());
+        }
+
+        System.out.print("Enter element to remove: ");
+        int key = s.nextInt();
+
+        if (obj.remove(key)) {
+            System.out.println("Element removed successfully");
+        } else {
+            System.out.println("Element not found");
+        }
+
+        System.out.println("Updated Set: " + obj);
+    }
+}
+4. Find Common Elements Between Two Sets
+
+Uses retainAll().
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Set<Integer> obj1 = new HashSet<>();
+        Set<Integer> obj2 = new HashSet<>();
+
+        System.out.print("Enter number of elements in Set 1: ");
+        int n1 = s.nextInt();
+
+        System.out.println("Enter Set 1 elements:");
+
+        for (int i = 0; i < n1; i++) {
+            obj1.add(s.nextInt());
+        }
+
+        System.out.print("Enter number of elements in Set 2: ");
+        int n2 = s.nextInt();
+
+        System.out.println("Enter Set 2 elements:");
+
+        for (int i = 0; i < n2; i++) {
+            obj2.add(s.nextInt());
+        }
+
+        obj1.retainAll(obj2);
+
+        System.out.println("Common elements: " + obj1);
+    }
+}
+5. Find Union of Two Sets
+
+Uses addAll().
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Set<Integer> obj1 = new HashSet<>();
+        Set<Integer> obj2 = new HashSet<>();
+
+        System.out.print("Enter number of elements in Set 1: ");
+        int n1 = s.nextInt();
+
+        System.out.println("Enter Set 1 elements:");
+
+        for (int i = 0; i < n1; i++) {
+            obj1.add(s.nextInt());
+        }
+
+        System.out.print("Enter number of elements in Set 2: ");
+        int n2 = s.nextInt();
+
+        System.out.println("Enter Set 2 elements:");
+
+        for (int i = 0; i < n2; i++) {
+            obj2.add(s.nextInt());
+        }
+
+        obj1.addAll(obj2);
+
+        System.out.println("Union of Set 1 and Set 2: " + obj1);
+    }
+}
+Main Set Types
+Set<Integer> obj = new HashSet<>();
+
+HashSet → Does not guarantee insertion order.
+
+Set<Integer> obj = new LinkedHashSet<>();
+
+LinkedHashSet → Maintains insertion order.
+
+Set<Integer> obj = new TreeSet<>();
