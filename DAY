@@ -394,3 +394,17 @@ public class Main
 //output:
 1111
 585
+//built in methods
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    int n=10;
+    String bin=Integer.toBinaryString(n);
+    System.out.println(bin);
+    int dec=Integer.parseInt(String.valueOf(bin),2);
+    System.out.println(dec);
+	}
+}
+1010
+10
