@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		ArrayList obj=new ArrayList();
+		obj.add(90);
+		obj.add(9);
+		obj.add(80);
+		obj.add(70);
+		obj.add(60);
+		obj.get(2);
+		obj.set(0,1);
+		obj.remove(2);
+		obj.size();
+		obj.contains(1);
+		obj.isEmpty();
+		obj.lastIndexOf(90);
+		System.out.print(obj);
+		
+	}
+}
+
+Hello World
+[1, 9, 70, 60]
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        ArrayList<Integer>set=new ArrayList<>();
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            set.add(sc.nextInt());
+        }
+		
+		System.out.print(set);
+	}
+}
+//output:
+5
+00 88 66 55 44  
+[0, 88, 66, 55, 44]
