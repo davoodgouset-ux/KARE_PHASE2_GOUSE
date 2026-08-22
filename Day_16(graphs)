@@ -58,3 +58,257 @@ public class Main
     }
 	}
 }
+
+
+
+1. Queue Using ArrayDeque – Insert and Display
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new ArrayDeque<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.println("Queue: " + obj);
+    }
+}
+2. Queue Using ArrayDeque – Delete Front Element
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new ArrayDeque<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.println("Queue: " + obj);
+
+        System.out.println("Deleted element: " + obj.poll());
+
+        System.out.println("Queue after deletion: " + obj);
+    }
+}
+3. Queue Using ArrayDeque – Find Front Element
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new ArrayDeque<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.println("Queue: " + obj);
+        System.out.println("Front element: " + obj.peek());
+    }
+}
+4. Queue Using ArrayDeque – Search Element
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new ArrayDeque<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.print("Enter element to search: ");
+        int key = s.nextInt();
+
+        if (obj.contains(key)) {
+            System.out.println("Element is present");
+        } else {
+            System.out.println("Element is not present");
+        }
+    }
+}
+5. Queue Using ArrayDeque – Remove All Elements
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new ArrayDeque<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.println("Original Queue: " + obj);
+
+        while (!obj.isEmpty()) {
+            System.out.println("Deleted: " + obj.poll());
+        }
+
+        System.out.println("Queue is empty");
+    }
+}
+Queue Using LinkedList – 5 Programs
+6. Queue Using LinkedList – Insert and Display
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new LinkedList<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.println("Queue: " + obj);
+    }
+}
+7. Queue Using LinkedList – Delete Front Element
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new LinkedList<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.println("Queue: " + obj);
+
+        System.out.println("Deleted element: " + obj.poll());
+
+        System.out.println("Updated Queue: " + obj);
+    }
+}
+8. Queue Using LinkedList – Size and Front Element
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new LinkedList<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.println("Queue: " + obj);
+        System.out.println("Front element: " + obj.peek());
+        System.out.println("Size: " + obj.size());
+    }
+}
+9. Queue Using LinkedList – Search and Remove
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new LinkedList<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.print("Enter element to remove: ");
+        int key = s.nextInt();
+
+        System.out.println("Original Queue: " + obj);
+
+        if (obj.contains(key)) {
+            obj.remove(key);
+            System.out.println("Element removed");
+        } else {
+            System.out.println("Element not found");
+        }
+
+        System.out.println("Updated Queue: " + obj);
+    }
+}
+10. Queue Using LinkedList – Display Elements by Removing
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        Queue<Integer> obj = new LinkedList<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = s.nextInt();
+
+        System.out.println("Enter elements:");
+
+        for (int i = 0; i < n; i++) {
+            obj.offer(s.nextInt());
+        }
+
+        System.out.println("Queue elements:");
+
+        while (!obj.isEmpty()) {
+            System.out.println(obj.poll());
+        }
+    }
+}
