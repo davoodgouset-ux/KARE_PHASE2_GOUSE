@@ -39,5 +39,65 @@ public class Main
 }
 //output:
 5
-00 88 66 55 44  
+00 88 66 55 44 
 [0, 88, 66, 55, 44]
+//nuilt in methods for linked list;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+    LinkedList obj=new LinkedList();
+    obj.add(0,2);
+    obj.add(20);
+    obj.addFirst(191);
+    obj.addLast(4444);
+    System.out.println(obj.get(2));
+    System.out.println(obj);
+    System.out.println(obj.getFirst());
+    System.out.println(obj.getLast());
+    obj.set(2,8888);
+    
+    System.out.println(obj);
+    obj.remove();//remove first element
+    
+    System.out.println(obj);
+    obj.remove(1);
+    System.out.println(obj);
+    obj.set(1,6666);
+    System.out.println(obj);
+    obj.add(0,2);
+    obj.add(20);
+    obj.addFirst(191);
+    obj.addLast(4444);
+    System.out.println(obj);
+    obj.removeLast();
+    System.out.println(obj);
+    obj.removeFirst();
+    System.out.println(obj);
+    System.out.println("Enter index value");
+    int ind=sc.nextInt();
+    System.out.println("Enter value");
+    int val=sc.nextInt();
+    obj.set(ind,val);
+    System.out.println(obj);
+    int n=sc.nextInt();
+	}
+}
+//output:
+20
+[191, 2, 20, 4444]
+191
+4444
+[191, 2, 8888, 4444]
+[2, 8888, 4444]
+[2, 4444]
+[2, 6666]
+[191, 2, 2, 6666, 20, 4444]
+[191, 2, 2, 6666, 20]
+[2, 2, 6666, 20]
+Enter index value
+3
+Enter value
+768
+[2, 2, 6666, 768]
