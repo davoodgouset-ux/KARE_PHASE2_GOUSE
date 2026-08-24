@@ -565,9 +565,9 @@ public class Main{
         }
         int max=0;
         int max_sum=Integer.MIN_VALUE;
-        for(int i=0;i<=n-k;i++){
+        for(int i=0;i<=n-k;i++){--this tell that since window must have k elements in picture that n-k so for last window k elements will be there
             max=0;
-            for(int j=i;j<i+k;j++){
+            for(int j=i;j<i+k;j++){--this tell j starts i index and moves upto k elements only
                 max+=a[j];
             }
             max_sum=Math.max(max_sum,max);
