@@ -590,11 +590,11 @@ public class Main{
         for(int i=0;i<n;i++){
             a[i]=sc.nextInt();
         }int sum=0;
-        for(int i=0;i<k;i++){
+        for(int i=0;i<k;i++){--calculate first slide window sum
             sum+=a[i];
         }
         int max_sum=sum;
-        for(int i=k;i<n;i++){
+        for(int i=k;i<n;i++){--subtract this sum from leaving element and adding front element
             sum=sum-a[i-k]+a[i];
             if(sum>max_sum){
                 max_sum=sum;
