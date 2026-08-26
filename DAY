@@ -676,6 +676,7 @@ public class Main{
     }
 }
 //sliding window
+//variable length sliding window
 import java.util.*;
 public class Main
 {
@@ -709,3 +710,29 @@ public class Main
         }
 	}
 }
+//string with no repeating character 
+//sliding window
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String str=sc.nextLine();
+    HashSet<Character>set=new HashSet<>();
+    int left=0;
+    int right=0;
+    int max_length=0;
+    for(right=0;right<str.length();right++){
+        while(set.contains(str.charAt(right))){
+            set.remove(str.charAt(left));
+            left++;
+        }
+        set.add(str.charAt(right));
+        max_length=Math.max(max_length,(right-left+1));
+    }
+    System.out.print(max_length);
+	}
+}
+//output:
+abcabcbb
+3
