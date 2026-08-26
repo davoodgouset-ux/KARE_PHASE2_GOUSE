@@ -675,3 +675,37 @@ public class Main{
         }
     }
 }
+//sliding window
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int target=sc.nextInt();
+    int n=sc.nextInt();
+    int a[]=new int[n];
+    for(int i=0;i<n;i++){
+        a[i]=sc.nextInt();
+    }
+    int sum=0;
+    int left=0;
+    int right=0;
+    int min_length=Integer.MAX_VALUE;
+    for(right=0;right<n;right++){
+    sum+=a[right];
+        while(sum>=target){
+            int length=right-left+1;
+            if(length<min_length){
+                min_length=length;
+            }
+            sum=sum-a[left];
+            left++;
+           }
+        }
+        if(min_length==Integer.MAX_VALUE){
+            System.out.print(0);
+        }else{
+            System.out.print(min_length);
+        }
+	}
+}
