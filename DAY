@@ -711,7 +711,7 @@ public class Main
 	}
 }
 //string with no repeating character 
-//sliding window
+//sliding window better approach Time complexity is O(2n) Space complexity is O(n) becoz using set here
 import java.util.*;
 public class Main
 {
@@ -736,3 +736,30 @@ public class Main
 //output:
 abcabcbb
 3
+//brute force approach for longest substring using hashset
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    int maxlen=0;
+    for(int start=0;start<s.length();start++){
+        HashSet<Character>set=new HashSet<>();
+        for(int end=start;end<s.length();end++){
+            char ch=s.charAt(end);
+            if(set.contains(ch)){
+                break;
+            }
+            set.add(ch);
+            int len=end-start+1;
+            maxlen=Math.max(len,maxlen);
+        }
+        
+    }
+        System.out.print(maxlen);
+	}
+}
+//output:
+abcaabcdba
+4
