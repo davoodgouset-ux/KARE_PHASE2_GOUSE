@@ -763,3 +763,4 @@ public class Main
 //output:
 abcaabcdba
 4
+//So this new question allows duplicates. It only limits the number of different character types.
