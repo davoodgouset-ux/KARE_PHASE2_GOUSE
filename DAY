@@ -781,3 +781,72 @@ public class Main
 	}
 }
 1203 output
+
+//merge sort
+import java.util.*;
+class Mergee{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int a[]={2,4,2,1,3,9,7,6,5,4};
+        int n=a.length-1;
+        System.out.println("Before Merge Sort: "+Arrays.toString(a));
+        mergeSort(a,0,n);
+        System.out.println("After  Merge Sort: "+Arrays.toString(a));
+    }
+    public static void mergeSort(int []a,int start,int end){
+        if(start>=end){
+            return;
+        }
+        int mid=(start+end)/2;
+        mergeSort(a,start,mid);
+        mergeSort(a,mid+1,end);
+        Merge(a,start,mid,end);
+    }
+    public static void Merge(int[] a, int start, int mid, int end) {
+        int leftsize = mid - start + 1;
+        int rightsize = end - mid;
+        
+        int leftArray[] = new int[leftsize];
+        int rightArray[] = new int[rightsize];
+        
+        // Copy data to temporary arrays
+        for (int i = 0; i < leftsize; i++) {
+            leftArray[i] = a[start + i];
+        }
+        for (int j = 0; j < rightsize; j++) {
+            rightArray[j] = a[mid + 1 + j];
+        }
+        
+        // Initial indexes of first and second sub-arrays
+        int i = 0, j = 0;
+        
+        // Initial index of merged sub-array array
+        int k = start;
+        while (i < leftsize && j < rightsize) {
+            if (leftArray[i] <= rightArray[j]) {
+                a[k] = leftArray[i];
+                i++;
+            } else {
+                a[k] = rightArray[j];
+                j++;
+            }
+            k++;
+        }
+        
+        // Copy remaining elements of leftArray[] if any
+        while (i < leftsize) {
+            a[k] = leftArray[i];
+            i++;
+            k++;
+        }
+        
+        // Copy remaining elements of rightArray[] if any
+        while (j < rightsize) {
+            a[k] = rightArray[j];
+            j++;
+            k++;
+        }
+    }
+}
+Before Merge Sort: [2, 4, 2, 1, 3, 9, 7, 6, 5, 4]
+After  Merge Sort: [1, 2, 2, 3, 4, 4, 5, 6, 7, 9]
