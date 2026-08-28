@@ -1,0 +1,46 @@
+//brute force
+import java.util.*;
+public class Mergee
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int k=sc.nextInt();
+    int n=sc.nextInt();
+    int a[]=new int[n];
+    for(int i=0;i<n;i++){
+        a[i]=sc.nextInt();
+    }
+    int max=Integer.MIN_VALUE;
+    for(int i=0;i<n-k;i++){
+        int sum=0;
+        for(int j=i;j<i+k;j++){
+            sum+=a[j];
+        }
+        max=Math.max(sum,max);
+    }
+    System.out.print(max);
+	}
+}///optimal
+import java.util.*;
+public class Optimal{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int k=sc.nextInt();
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        int sum=0;
+        for(int i=0;i<k;i++){
+            sum+=a[i];
+        }
+        int maxsum=sum;
+        for(int i=k;i<n;i++){
+            sum=sum-a[i-k]+a[i];
+            maxsum=Math.min(sum,maxsum);
+        }
+        System.out.print(maxsum);
+        
+    }
+}
