@@ -896,17 +896,18 @@ public class Main
     map.put(a[right],map.getOrDefault(a[right],0)+1);
         while(map.size()>k){
             map.put(a[left],map.get(a[left])-1);
+            if(map.get(a[left])==0)
             map.remove(a[left]);
             left++;
         }
         int length=right-left+1;
             maxlength=Math.max(length,maxlength);
     }
-    System.out.print(map.size());
+    System.out.print(maxlength);
 	}
 }
 
 2
 5
 1 2 1 2 3
-values:2//only 2 character can be filled with in the map
+values contiuosly can store:4
