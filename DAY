@@ -1007,3 +1007,33 @@ public class Main
 4
 2
 16
+
+brute force approach
+
+import java.util.*;
+public class Main{
+  public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int k=sc.nextInt();
+    int n=sc.nextInt();
+    int a[]=new int[n];
+    for(int i=0;i<n;i++){
+      a[i]=sc.nextInt();
+    }int sum;
+    int count=0;
+    for(int i=0;i<n;i++){
+      sum=0;
+      for(int j=i;j<n;j++){
+        sum+=a[j];
+        if(sum==k){
+          count++;
+        }
+      }
+    }
+    System.out.print(count);
+  }
+}
+3
+5
+1 1 1 1 1
+3
