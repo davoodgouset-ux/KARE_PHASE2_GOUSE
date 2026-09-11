@@ -979,3 +979,31 @@ public class Main
 l2k34jjdslgj0239829580298205
 19
 9
+sum range right -left
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0; i<n; i++) {
+			a[i]=sc.nextInt();
+		}
+		int sum=0;
+		int pre[]=new int[n+1];
+		for(int i=0; i<n; i++) {
+			sum=sum+a[i];
+			pre[i+1]=sum;
+		}
+		int r=sc.nextInt(),l=sc.nextInt();
+		int right=pre[r+1];
+		int left=pre[l];
+		System.out.print((right-left));
+	}
+}
+6
+5 2 7 3 6 1
+4
+2
+16
