@@ -1107,3 +1107,73 @@ public class Main {
     }
 
 }
+
+
+// "Apple banana Orange umbrella India elephant"
+// Find the longest word that satisfies both conditions:
+// The word has an odd number of characters.
+// The word ends with a vowel (a, e, i, o, u).
+// For the above input, the expected output is:
+// banana
+
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    System.out.print(Condition(s));
+  }
+  static String Condition(String s){
+    String[] words=s.split(" ");
+    String res="";
+    int maxlen=0;
+    for(String wod:words){
+      int len=wod.length();
+      int lastchar=wod.length()-1;
+      if(len % 2!=0 && isVowel(wod.charAt(lastchar))){
+        if(maxlen<len)
+        res=wod;
+      }
+    }
+    return res;
+  }
+
+  static boolean isVowel(char c){
+    char s=Character.toLowerCase(c);
+    return s=='a' || s=='e' || s=='i' || s=='o' || s=='u';
+  }
+}
+
+//hashmap with higest freqnumber but if it has same freq take smallest of number not freq
+import java.util.*;
+public class Main{
+  public static void main(String [] args){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int a[]=new int[n];
+    for(int i=0;i<n;i++){
+      a[i]=sc.nextInt();
+    }
+    System.out.print(Yup(a));
+  }
+  static int Yup(int[] a){
+  HashMap<Integer,Integer>map=new HashMap<>();
+    for(int num:a){
+      map.put(num,map.getOrDefault(num,0)+1);
+    }
+    int bestnumber=0;
+    int bestnumberfreq=0;
+    for(Map.Entry<Integer,Integer>entry:map.entrySet()){
+      int currentnumber=entry.getKey();
+      int currentnumberfreq=entry.getValue();
+      if(currentnumberfreq>bestnumberfreq){
+        bestnumber=currentnumber;
+        bestnumberfreq=currentnumberfreq;
+      }
+      else if(bestnumberfreq==currentnumberfreq && bestnumberfreq > currentnumberfreq){
+        currentnumber=bestnumber;
+      }
+    }
+    return bestnumber;
+  }
+}
