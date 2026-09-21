@@ -1077,3 +1077,33 @@ public class Main {
 5
 1 2 1 2 1
 4
+
+//first word should be voewl and max length word that satisfies the even length
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String s="Iam Tadipatri Davood Gouse Am here to tell you that";
+
+      String[] word=s.split(" ");
+      int maxlen=0;
+      String maxword="";
+
+      for( String num:word){
+        int len=num.length();
+        if((len%2==0) && isvowel(num.charAt(0))){
+          if(maxlen<len){
+            maxlen=len;
+            maxword=num;
+          }
+        } 
+      }
+      System.out.println(maxword);
+      
+    }
+    static boolean isvowel(char b){
+       char a=Character.toUpperCase(b);
+      return a=='A' || a=='E' || a=='I' || a=='O' || a=='U';
+    }
+
+}
