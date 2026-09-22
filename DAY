@@ -1177,3 +1177,70 @@ public class Main{
     return bestnumber;
   }
 }
+
+most ocuurece elements using hashmap
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s=sc.nextLine();
+      LinkedHashMap<Character,Integer>map=new LinkedHashMap<>(s.length());
+      for(char i=0;i<s.length();i++){
+        char st=s.charAt(i);
+        map.put(st,map.getOrDefault(st,0)+1);
+      }
+      int maxfreqnum=0;
+      char maxfreqchar='\0';
+      StringBuilder sb=new StringBuilder();
+      for(Map.Entry<Character,Integer>entry:map.entrySet()){
+        int currentfrechar=entry.getValue();
+        char currentchar=entry.getKey();
+        if(currentfrechar>maxfreqnum){
+          maxfreqnum=currentfrechar;
+          maxfreqchar=currentchar;
+        }
+      }
+      for(Map.Entry<Character,Integer>entry:map.entrySet()){
+      int currentfrechar=entry.getValue();
+        char currentchar=entry.getKey();
+        if(currentfrechar==maxfreqnum){
+            sb.append(currentchar);
+            sb.append(" : ");
+            sb.append(currentfrechar);
+            sb.append("\n");
+          }
+      }
+      System.out.print(sb);
+    }
+}
+Programming
+r : 2
+g : 2
+m : 2
+//single occurence elements using hashmap
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s=sc.nextLine();
+      LinkedHashMap<Character,Integer>map=new LinkedHashMap<>(s.length());
+      for(char i=0;i<s.length();i++){
+        char st=s.charAt(i);
+        map.put(st,map.getOrDefault(st,0)+1);
+      }
+      StringBuilder sb=new StringBuilder();
+      for(Map.Entry<Character,Integer>entry:map.entrySet()){
+        int currentfrechar=entry.getValue();
+        char currentchar=entry.getKey();
+        if(currentfrechar==1){
+          sb.append(currentchar);
+        }
+      }
+      System.out.print(sb);
+    }
+}
+Programming
+Poain
