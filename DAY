@@ -1244,3 +1244,29 @@ public class Main {
 }
 Programming
 Poain
+
+rat problem how many houses do i need to go to collect required food 
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    int r=sc.nextInt();
+    int unit=sc.nextInt();
+    int n=sc.nextInt();
+    int a[]=new int[n];
+    for(int i=0;i<n;i++){
+      a[i]=sc.nextInt();
+    }
+    int count=0;
+    int sum=0;
+    int req=r*unit;
+    for(int i=0;i<n;i++){
+      sum+=a[i];
+      count++;
+      if(req<sum){
+        break;
+      }
+    }
+System.out.print("No.of houses requ for food "+count);
+  }
+}
