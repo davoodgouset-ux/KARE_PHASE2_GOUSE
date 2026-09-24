@@ -1327,3 +1327,39 @@ firstmissing even number
 6 
 2 6 8 10 12 14
 4
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s1=sc.nextLine();
+      String s2=sc.nextLine();
+      String s11[]=s1.split("[,\\s]+");
+      LinkedHashSet<String>set111=new LinkedHashSet<>();
+      LinkedHashSet<String>set222=new LinkedHashSet<>();
+      for(String word:s11){
+        set111.add(word);
+      }
+      String s22[]=s2.split(" ");
+      for(String word:s22){
+        set222.add(word);
+      }
+      StringBuilder sb=new StringBuilder();
+      for(String word:set111){
+        if(set222.contains(word)){
+          sb.append(word);
+          sb.append(" ");
+        }
+      }
+      System.out.print(sb);
+
+    }
+}
+
+hello dikshi world
+dikshi world hello
+
+op
+hello dikshi world
