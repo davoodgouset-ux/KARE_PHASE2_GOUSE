@@ -1363,3 +1363,29 @@ dikshi world hello
 
 op
 hello dikshi world
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int start=sc.nextInt();
+      int endnum=sc.nextInt();
+      int divisiblebynum=0;
+      int notdivisib=0;
+      for(int i=1;i<=endnum;i++){
+        if(i%start==0){
+          divisiblebynum+=i;
+        }
+        else{
+          notdivisib+=i;
+        }
+      }
+      System.out.print(notdivisib-divisiblebynum);
+    }
+}
+
+4
+20
+90
