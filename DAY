@@ -1389,3 +1389,34 @@ public class Main {
 4
 20
 90
+
+
+//find the kth largest elemetn
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int k=sc.nextInt();
+      int n=sc.nextInt();
+      int a[]=new int[n];
+      for(int i=0;i<n;i++){
+        a[i]=sc.nextInt();
+      }
+      int largest=0;
+      for(int count=1;count<=k;count++){
+        int index=0;
+        int max=a[0];
+        for(int i=0;i<n;i++){
+          if(max<a[i]){
+            max=a[i];
+            index=i;
+          }
+        }
+        largest=max;
+        a[index]=Integer.MIN_VALUE;
+      }
+      System.out.print(largest);
+    }
+}
