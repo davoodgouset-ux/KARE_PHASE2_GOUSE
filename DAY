@@ -1441,3 +1441,28 @@ public class Main {
     }
 }
 //kth smallest element
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int total=0;
+        String s="abd";
+        int n=s.length();
+        for(int i=0;i<n;i++){
+            int cv=s.charAt(i)-'a'+1;
+            if(i>0){
+                int lv=s.charAt(i-1)-'a'+1;
+                cv+=lv;
+            }
+            if(i<n-1){
+                int rv=s.charAt(i+1)-'a'+1;
+                cv+=rv;
+            }
+            total+=cv;
+        }
+        System.out.print(total);
+    }
+}
+16 ans
