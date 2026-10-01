@@ -1466,3 +1466,37 @@ public class Main{
     }
 }
 16 ans
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String str="the sun set ine the west";
+    String newstr[]=str.split(" ");
+    int length=0;
+    String ans="00";
+    int currentwordlength=0;
+    int maxwordlength=0;
+    for(String word:newstr){
+        length=word.length();
+        currentwordlength=length;
+        if(length%2==0 && isVowel(word.charAt(0))){
+            if(currentwordlength>maxwordlength){
+                maxwordlength=currentwordlength;
+                ans=word;
+                
+            }
+        }
+    }
+    System.out.print(ans);
+	}
+	public static boolean isVowel(char a){
+	    return a=='A' || a=='a' || a=='E' || a=='e' || a=='i' || a=='I' ||a== 'O' || a=='o' ||a=='u' || a=='U';
+	}
+}
+//
+ans=00
+if in 
+then ans in
