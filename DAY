@@ -1525,3 +1525,27 @@ public class Main
 	}
 }
 //39 ans
+
+//first repeating char in string
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      LinkedHashMap<Character,Integer>map=new LinkedHashMap<>();
+      for(int  i=0;i<str.length();i++){
+        char letter=str.charAt(i);
+        map.put(letter,map.getOrDefault(letter,0)+1);
+      }
+      String finalletter="-1";
+      for(Map.Entry<Character,Integer>entry:map.entrySet()){
+        char ch=entry.getKey();
+        int freq=entry.getValue();
+        if(freq==1){
+          finalletter=String.valueOf(ch);
+          break;
+        }
+      }
+      System.out.print(finalletter);
+    }
+}
