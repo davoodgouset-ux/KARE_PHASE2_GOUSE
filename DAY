@@ -1549,3 +1549,39 @@ public class Main {
       System.out.print(finalletter);
     }
 }
+
+
+//reverse a individual string
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      String finstr[]=str.split(" ");
+      StringBuilder sb=new StringBuilder();
+      for(String word:finstr){
+        String revword=StringReverse(word);
+        sb.append(revword).append(" ");
+
+      }
+        // System.out.print(sb);
+        String strs=sb.toString();
+        System.out.print(strs);
+    }
+    public static String StringReverse(String word){
+      char newstr[]=word.toCharArray();
+      int left=0;
+      int right=word.length()-1;
+      while(left<right){
+        char temp=newstr[left];
+        newstr[left]=newstr[right];
+        newstr[right]=temp;
+        left++;
+        right--;
+      }
+      // System.out.print(newstr);
+      return new String(newstr);
+    }
+}
