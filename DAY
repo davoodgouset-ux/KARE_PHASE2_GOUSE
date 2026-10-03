@@ -1714,3 +1714,33 @@ public class Main {
       System.out.print(ans);
     }
 }
+
+
+// // Frequency of a given character.
+// Example:
+// Input:
+// banana
+// a 3
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      char chart=sc.next().charAt(0);
+      LinkedHashMap<Character,Integer>map=new LinkedHashMap<>();
+      for(int i=0;i<str.length();i++){
+        char ch=str.charAt(i);
+        map.put(ch,map.getOrDefault(ch,0)+1);
+      }
+      char maxele='\0';
+      int maxfreq=Integer.MAX_VALUE;
+      for(Map.Entry<Character,Integer>entry:map.entrySet()){
+        char charts=entry.getKey();
+        int freq=entry.getValue();
+        if(charts==chart){
+          System.out.print(charts+" "+freq);
+        }
+      }
+      // System.out.println(maxfreq+" "+maxele);
+    }
+}
