@@ -1585,3 +1585,27 @@ public class Main {
       return new String(newstr);
     }
 }
+
+
+
+//remove duplicates in word
+programming
+progamin
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      LinkedHashSet<Character>set=new LinkedHashSet<>();
+      for(int i=0;i<str.length();i++){
+        char letter=str.charAt(i);
+        set.add(letter);
+      }
+      StringBuilder sb=new StringBuilder();
+      for(char word:set){
+        sb.append(word);
+      }
+      System.out.print(sb.toString());
+    }
+}
