@@ -1693,3 +1693,24 @@ s1 = "abcd"
 s2 = "cdab"
 
 Output: true
+
+
+// first repeating word
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      LinkedHashSet<String>set=new LinkedHashSet<>();
+      String words[]=str.split(" ");
+      String ans="";
+      for(String word:words){
+        if(set.contains(word)){
+          ans=word;
+          break;
+        }
+        set.add(word);
+      }
+      System.out.print(ans);
+    }
+}
