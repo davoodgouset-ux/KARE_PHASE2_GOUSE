@@ -1664,3 +1664,32 @@ public class Main {
       System.out.print(words[index]);
     }
 }
+
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s1=sc.nextLine();
+      String s2=sc.nextLine();
+      int length1=s1.length();
+      int length2=s2.length();
+      if(length1!=length2){
+        System.out.print("false");
+        return;
+      }
+      String s3=s1+s1;
+      if(s3.contains(s2)){
+        System.out.print("true");
+      }else{
+        System.out.print("false");
+      }
+
+    }
+}
+
+s1 = "abcd"
+s2 = "cdab"
+
+Output: true
