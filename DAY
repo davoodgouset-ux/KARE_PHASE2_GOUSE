@@ -1793,3 +1793,38 @@ public class Main {
 
     }
 }
+
+//check palindrome ignoring speacial characters
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      boolean ans=true;
+      int left=0;
+      int right=str.length()-1;
+      while(left<right){
+        if(!Character.isLetterOrDigit(str.charAt(left))){
+          left++;
+          continue;
+        }
+        if(!Character.isLetterOrDigit(str.charAt(right))){
+          right--;
+          continue;
+        }
+        char l=Character.toLowerCase(str.charAt(left));
+        char r=Character.toLowerCase(str.charAt(right));
+        if(l!=r){
+          ans=false;
+          break;
+        }
+        left++;
+        right--;
+      }
+      System.out.print(ans);
+    }
+}
+
+
+A man, a plan, a canal: Panama
+true
