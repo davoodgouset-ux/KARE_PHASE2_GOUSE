@@ -1864,3 +1864,42 @@ public class Main {
 madam is level but apple is not
 //output
 madam level
+
+//length of longest palindeome word
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      int n=str.length();
+      int highlen=0;
+      int length=0;
+      StringBuilder sb=new StringBuilder();
+      String words[]=str.split(" ");
+      for(String word:words){
+        if(isPalind(word)){
+          if(word.length()>length){
+            highlen=word.length();
+            length=highlen;
+          }
+        }
+      }
+      System.out.print(highlen);
+    }
+    static boolean isPalind(String word){
+      int left=0;
+      int right=word.length()-1;
+        while(left<right){
+        char r=Character.toLowerCase(word.charAt(right));
+        char l=Character.toLowerCase(word.charAt(left));
+          if(l!=r)
+          return false;
+          left++;
+          right--;
+        }
+      return true;
+    }
+}
+
+hello level madam programming racecar
+7
