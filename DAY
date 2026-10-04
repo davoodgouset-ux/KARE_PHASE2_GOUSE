@@ -1828,3 +1828,39 @@ public class Main {
 
 A man, a plan, a canal: Panama
 true
+
+
+//checking the list of words palindeome or not
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      int n=str.length();
+      StringBuilder sb=new StringBuilder();
+      String words[]=str.split(" ");
+      for(String word:words){
+        if(isPalind(word)){
+          sb.append(word).append(" ");
+        }
+      }
+      System.out.print(sb.toString());
+    }
+    static boolean isPalind(String word){
+      int left=0;
+      int right=word.length()-1;
+        char l=Character.toLowerCase(word.charAt(left));
+        char r=Character.toLowerCase(word.charAt(right));
+        while(left<right){
+          if(l!=r)
+          return false;
+          left++;
+          right--;
+        }
+      return true;
+    }
+}
+
+madam is level but apple is not
+//output
+madam level
