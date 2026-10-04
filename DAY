@@ -1903,3 +1903,42 @@ public class Main {
 
 hello level madam programming racecar
 7
+
+
+// only print higest length of palindrome word
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s=sc.nextLine();
+      String words[]=s.split(" ");
+      int index=0;
+      int length=0;
+      for(int i=0;i<words.length;i++){
+        String word=words[i];
+        if(isword(word)){
+          if(word.length()>length){
+            length=word.length();
+            index=i;
+          }
+        }
+      }
+      System.out.print(words[index]);
+    }
+    static boolean isword(String word){
+      int left=0;
+      int right=word.length()-1;
+      while(left<right){
+        char l=Character.toLowerCase(word.charAt(left));
+        char r=Character.toLowerCase(word.charAt(right));
+        if(l!=r){
+          return false;
+        }
+        left++;
+        right--;
+      }
+      return true;
+    }
+}
+madam racacar level
+racacar
