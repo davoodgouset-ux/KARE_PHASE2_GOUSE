@@ -2168,3 +2168,30 @@ public class Main {
       return l=='a' || l=='e'  || l=='i' ||l=='o' || l=='u';
     }
 }
+
+
+// Given a string, find the character that occurs first among the vowels.
+// Example:
+// Input:
+// "computer science"
+
+// Output:
+// "o"
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      char arr[]=str.toCharArray();
+      for(int i=0;i<str.length();i++){
+        if(isvowel(arr[i])){
+          System.out.print(arr[i]);
+          break;
+        }
+      }
+    }
+    static  boolean isvowel(char ch){
+      char l=Character.toLowerCase(ch);
+      return l=='a' || l=='e' ||l=='i' || l=='o' ||l=='u';
+    }
+}
