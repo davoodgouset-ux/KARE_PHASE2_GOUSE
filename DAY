@@ -1947,8 +1947,7 @@ racacar
 // // First model: Reverse only vowels
 // Example:
 // Input:  hello
-// Output: holle
-import java.util.*;
+// Output: holleimport java.util.*;
 public class Main {
     public static void main(String[] args) {
       Scanner sc=new Scanner(System.in);
@@ -1957,20 +1956,21 @@ public class Main {
       int left=0;
       int right=s.length()-1;
       while(left<right){
-        if(isvowel(arr[left])!=isvowel(arr[left])){
+        if(!isvowel(arr[left])){
           left++;
         }
-        if(isvowel(arr[right])!=isvowel(arr[right])){
-          left++;
+         else if(!isvowel(arr[right])){
+          right--;
         }
         
-        if(isvowel(arr[left])==isvowel(arr[right])){
+        else{
           char temp=arr[left];
           arr[left]=arr[right];
           arr[right]=temp;
-        }
+        
         left++;
         right--;
+        }
       }
       System.out.print(arr);
 
@@ -1980,3 +1980,5 @@ public class Main {
       return l=='a' || l=='e' || l=='i' || l=='o' ||l=='u';
     }
 }
+
+//output above hello changes with vowels
