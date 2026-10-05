@@ -2017,3 +2017,32 @@ public class Main {
       System.out.print(arr);
     }
 }
+
+// Given a string and two indices L and R, reverse only the characters between L and R.
+// Example:
+// Input:
+// s = "abcdefg"
+// L = 2
+// R = 5
+
+// Output:
+// abfedcg
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s=sc.nextLine();
+      int left=sc.nextInt();
+      int right=sc.nextInt();
+      char arr[]=s.toCharArray();
+      while(left<right){
+        char temp=arr[left];
+        arr[left]=arr[right];
+        arr[right]=temp;
+        left++;
+        right--;
+      }
+      System.out.print(arr);
+    }
+}
