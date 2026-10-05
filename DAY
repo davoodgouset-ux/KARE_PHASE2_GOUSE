@@ -1942,3 +1942,41 @@ public class Main {
 }
 madam racacar level
 racacar
+
+
+// // First model: Reverse only vowels
+// Example:
+// Input:  hello
+// Output: holle
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s=sc.nextLine();
+      char arr[]=s.toCharArray();
+      int left=0;
+      int right=s.length()-1;
+      while(left<right){
+        if(isvowel(arr[left])!=isvowel(arr[left])){
+          left++;
+        }
+        if(isvowel(arr[right])!=isvowel(arr[right])){
+          left++;
+        }
+        
+        if(isvowel(arr[left])==isvowel(arr[right])){
+          char temp=arr[left];
+          arr[left]=arr[right];
+          arr[right]=temp;
+        }
+        left++;
+        right--;
+      }
+      System.out.print(arr);
+
+    }
+    private static boolean isvowel(char ch){
+      char l=Character.toLowerCase(ch);
+      return l=='a' || l=='e' || l=='i' || l=='o' ||l=='u';
+    }
+}
