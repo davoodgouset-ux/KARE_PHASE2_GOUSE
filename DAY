@@ -2077,3 +2077,40 @@ public class Main {
       }
     }
 }
+
+// Reverse only words whose length is greater than 3.
+// Input:
+// cat elephant dog tiger
+// Output:
+// cat tnahpele dog regit
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s=sc.nextLine();
+      String words[]=s.split(" ");
+      StringBuilder sb=new StringBuilder();
+      for(String word:words){
+        if(word.length()>3){
+          sb.append(isreverese(word)).append(" ");
+        }else{
+        sb.append(word).append(" ");
+        }
+      }
+      System.out.print(sb.toString());
+    }
+    static String isreverese(String word){
+      int left=0;
+      int right=word.length()-1;
+      char arr[]=word.toCharArray();
+      while(left<right){
+        char temp=arr[left];
+        arr[left]=arr[right];
+        arr[right]=temp;
+        left++;
+        right--;
+      }
+      return String.valueOf(arr);
+    }
+}
