@@ -2046,3 +2046,34 @@ public class Main {
       System.out.print(arr);
     }
 }
+
+// Input:
+// "I love Java programming"
+
+// Output:
+// "programming Java love I"
+
+// Important:
+// - Reverse the order of words
+// - Don't reverse the characters inside each word.
+// - Use split().
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s=sc.nextLine();
+      String str[]=s.split(" ");
+      int left=0;
+      int right=str.length-1;
+      while(left<right){
+      String temp=str[left];
+      str[left]=str[right];
+      str[right]=temp;
+      left++;
+      right--;
+      }
+      for(String word:str){
+        System.out.print(word+" ");
+      }
+    }
+}
