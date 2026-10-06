@@ -2195,3 +2195,29 @@ public class Main {
       return l=='a' || l=='e' ||l=='i' || l=='o' ||l=='u';
     }
 }
+//
+in:abbccddeeeeeeeeeee
+output:
+a1
+b2
+c2
+d2
+e11
+//logest consequtive numbers 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      int count=1;
+      for(int i=1;i<str.length();i++){
+        if(str.charAt(i-1)==str.charAt(i)){
+          count++;
+        }else{
+          System.out.print(str.charAt(i-1)+""+count+"\n");
+          count=1;
+        }
+      }
+      System.out.print(str.charAt(str.length()-1)+""+count);
+    }
+}
