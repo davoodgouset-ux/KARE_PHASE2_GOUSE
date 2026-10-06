@@ -2257,3 +2257,47 @@ public class Main {
       System.out.print(s+""+max);
     }
 }
+
+//if the length of any single character is occured print only the single character//so it makes compression logic better 
+if two character like a 1 putting single char taaking 2 places thats a shit
+so checking count value then answering respeting that
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      if(str.length()==0){
+        System.out.print("Empty");
+        return;
+      }
+      int count=1;
+      int max=0;
+      char ch=str.charAt(0);
+      for(int i=1;i<str.length();i++){
+        if(str.charAt(i)==str.charAt(i-1)){
+          count++;
+        }else{
+          if(count>1){
+          System.out.print(str.charAt(i-1)+""+count);
+          //we need to print i-1 only which is first char of string
+        }
+        else{
+          System.out.print(str.charAt(i-1));
+        }
+          count=1;
+        } 
+      }
+      if(count>1){
+      System.out.print(str.charAt(str.length()-1)+""+count);
+      }else{
+        System.out.print(str.charAt(str.length()-1));
+      }
+      //what is the last digit is also only char
+      //like abcd
+      //ouput becomes abcd1
+      //it should be abcd
+	  //above the solution is there check count>1 for the last one also same since our logic fails to write the last character values and count
+    }
+}
