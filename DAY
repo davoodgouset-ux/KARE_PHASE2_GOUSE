@@ -2447,3 +2447,33 @@ public class Main {
       }
     }
 }
+
+
+// eceba
+// 3
+// since ece is two differnt character max length is 3
+// if abababcdef then ans is 6
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      int left=0;
+      int maxlength=0;
+      HashMap<Character,Integer>map=new HashMap<>();
+      for(int right=0;right<str.length();right++){
+        char ch1=str.charAt(right);
+        map.put(ch1,map.getOrDefault(ch1,0)+1);
+        while(map.size()>2){
+        char ch2=str.charAt(left);
+          map.put(ch2, map.get(ch2) - 1);
+        if(map.get(ch2)==0){
+          map.remove(ch2);
+        }
+          left++;
+        }
+        maxlength=Math.max(maxlength,right-left+1);
+      }
+      System.out.print(maxlength);
+    }
+}
