@@ -2396,3 +2396,28 @@ public class Main {
       System.out.print(maxlength);
     }
 }
+//  flower
+// flow
+// flight
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    String str1=sc.nextLine();
+    String str2=sc.nextLine();
+    String str3=sc.nextLine();
+    int n=Math.min(str1.length(),Math.min(str2.length(),str3.length()));
+    StringBuilder sb=new StringBuilder();
+    for(int i=0;i<n;i++){
+      if((str1.charAt(i)==str2.charAt(i)) && (str2.charAt(i)==str3.charAt(i))){
+        sb.append(str1.charAt(i));
+      }
+      else{
+        break;
+      }
+    }
+    String finalstr=sb.toString();
+    System.out.print(finalstr);
+    }
+}
