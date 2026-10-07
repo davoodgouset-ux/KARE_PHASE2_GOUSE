@@ -2366,3 +2366,33 @@ public class Main {
 hello
 ell
 yes
+
+// Find the length of the longest substring without repeating characters.
+
+// Example:
+// Input:  abcabcbb
+// Output: 3
+
+// Longest substring = "abc"
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int left=0;
+      String str=sc.nextLine();
+      HashSet<Character>set=new HashSet<>();
+      int length=0;
+      int maxlength=0;
+      for(int right=0;right<str.length();right++){
+        while(set.contains(str.charAt(right))){
+          set.remove(str.charAt(left));
+          left++;
+        }
+        length=right-left+1;
+        set.add(str.charAt(right));
+        maxlength=Math.max(length,maxlength);
+      }
+      System.out.print(maxlength);
+    }
+}
