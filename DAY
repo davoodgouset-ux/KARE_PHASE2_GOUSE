@@ -2527,3 +2527,40 @@ public class Main {
       System.out.print(maxlength);
     }
 }
+
+//atelast one vowel without repeating chracter print logest substring as output using hashset
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      int left=0;
+      HashSet<Character>set=new HashSet<>();
+      int maxlenght=0;
+      int startindex=0,end=0;
+      int vowel=0;
+      for( int right=0;right<str.length();right++){
+        while(set.contains(str.charAt(right))){
+          if(isVowel(str.charAt(left))){
+            vowel--;
+          }
+          set.remove(str.charAt(left));
+          left++;
+        }
+        if(isVowel(str.charAt(right))){
+          vowel++;
+        }
+        set.add(str.charAt(right));
+        if(vowel>0 && right-left+1>maxlenght){
+          startindex=left;
+          end=right-left+1;
+        }
+        maxlenght=Math.max(maxlenght,right-left+1);
+      }
+      System.out.print(str.substring(startindex,end));
+    }
+    static boolean isVowel(char ch){
+      char l=Character.toLowerCase(ch);
+      return l=='a' || l=='e'|| l=='i' || l=='o' || l=='u';
+    }
+}
