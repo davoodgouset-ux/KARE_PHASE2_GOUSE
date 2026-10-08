@@ -2489,3 +2489,41 @@ class Solution {
     }
 }
 //valid anagram using sort in arrays method rather than map
+
+//For our difficult testcase:
+a1bc2def2gh!ijk3lmno
+
+Your code gives:
+10
+
+The valid longest window is:
+2gh!ijk3lmno
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      HashSet<Character>set=new HashSet<>();
+      int maxlength=0;
+      int left=0;
+      int digitcount=0;
+      for(int right=0;right<str.length();right++){
+        
+        while(set.contains(str.charAt(right))){
+          if(Character.isDigit(str.charAt(left))){
+            digitcount--;
+          }
+          set.remove(str.charAt(left));
+          left++;
+        }
+        if(Character.isDigit(str.charAt(right))){
+          digitcount++;
+        }
+        set.add(str.charAt(right));
+        if(digitcount>0){
+        maxlength=Math.max(maxlength,right-left+1);
+        }
+      }
+      System.out.print(maxlength);
+    }
+}
