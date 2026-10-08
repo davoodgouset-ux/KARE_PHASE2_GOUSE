@@ -2564,3 +2564,61 @@ public class Main {
       return l=='a' || l=='e'|| l=='i' || l=='o' || l=='u';
     }
 }
+
+
+// Given a sentence, find the longest word satisfying ALL these conditions:
+// 1. The word must contain no repeated alphabetic character.
+// 2. It must contain at least one vowel.
+// 3. Ignore case while checking repetition.
+// 4. If two valid words have the same length, choose the first one.
+// 5. Print the actual word as it appeared in the input.
+// Example
+// Input:
+// Java Python Code Algorithms SQL
+//no repeat characters in word and atleast have one vowel ans is algorithms //no repeat of any char and vowel present
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String str=sc.nextLine();
+      String str1[]=str.split("\\s+");
+      String ans="";
+      int maxlength=0,left=0;
+      for(int right=0;right<str1.length;right++){
+
+        if(checkBothduplicateandvowel(str1[right])){
+          if(str1[right].length()>maxlength){
+          ans=str1[right];
+          maxlength=str1[right].length();
+          }
+        }
+      }
+      System.out.print(ans);
+    }
+    static boolean checkBothduplicateandvowel(String st){
+      String fin=st.toLowerCase();
+      char arr1[]=fin.toCharArray();
+      HashSet<Character>set=new HashSet<>();
+      int vowel=0;
+      boolean ans=true;
+      for(char ch:arr1){
+        if(set.contains(ch)){
+          ans=false;
+        }
+        if(isVowel(ch)){
+          vowel++;
+        }
+        set.add(ch);
+      }
+      if(vowel>0 && ans){
+        return true;
+      }
+      return false;
+    }
+
+    static boolean isVowel(char ch){
+      char l=Character.toLowerCase(ch);
+      return l=='a' || l=='e' || l== 'i' || l=='o' ||l=='u';
+    }
+}
