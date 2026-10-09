@@ -2997,3 +2997,31 @@ public class Main {
       }
     }
 }
+
+//transpose of a matrix rows becomes colums in separate matrix not oriiginal
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int m=sc.nextInt();
+      int mat[][]=new int[n][m];
+      int tanspose[][]=new int[m][n];
+      for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+          mat[i][j]=sc.nextInt();
+        }
+      }
+      for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+          tanspose[j][i]=mat[i][j];
+        }
+      }
+      for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+          System.out.print(tanspose[i][j]);
+        }
+        System.out.println();
+      }
+    }
+}
