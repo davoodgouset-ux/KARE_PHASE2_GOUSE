@@ -2902,3 +2902,63 @@ public class Main {
 4 5 6
 7 8 9
 output:9
+
+// min value same above
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int m=sc.nextInt();
+      int mat[][]=new int[n][n];
+      for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+          mat[i][j]=sc.nextInt();
+        }
+      }
+      int currentmax=Integer.MAX_VALUE;
+      int value;
+      int sum=0;
+      for(int i=0;i<mat.length;i++){
+        for(int j=0;j<mat[i].length;j++){
+          value=mat[i][j];
+          if(value<currentmax){
+            currentmax=value;
+          }
+        }
+      }
+      System.out.print(currentmax);
+    }
+}
+
+//check even and odd count
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int find=sc.nextInt();
+      int n=sc.nextInt();
+      int m=sc.nextInt();
+      int mat[][]=new int[n][m];
+      for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+          mat[i][j]=sc.nextInt();
+        }
+      }
+      
+      int evencount=0,oddcount=0; 
+      int value;
+      int sum=0;
+      for(int i=0;i<mat.length;i++){
+        for(int j=0;j<mat[i].length;j++){
+          value=mat[i][j];
+          if(value%2==0){
+            evencount++;
+          }else{
+            oddcount++;
+          }
+        }
+      }
+      System.out.print(evencount+"\n"+oddcount);
+    }
+}
