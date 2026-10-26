@@ -3085,3 +3085,39 @@ public class Main {
 
     }
 }
+//check whther matrics is identity matrix or not
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int m=sc.nextInt();
+      int arr[][]=new int[n][m];
+      if(n!=m){
+        System.out.println("not identity");
+      }
+      for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+          arr[i][j]=sc.nextInt();
+        }
+      }
+      boolean flag=true;
+      for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+          if(i==j && arr[i][j]==1){
+            continue;
+          }else if (i!=j && arr[i][j]==0){
+            continue;
+          }else{
+            flag=false;
+            break;
+          }
+        }
+      }
+      if(flag){
+        System.out.println("identity");
+      }else{
+        System.out.println(" not identity");
+      }
+    }
+}
