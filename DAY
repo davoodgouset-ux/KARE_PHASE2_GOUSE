@@ -3161,3 +3161,28 @@ public class Main {
       
     }
 }
+
+import java.util.*;
+
+
+public class Main {
+
+  static class Node{
+    int data;
+    Node next;
+    Node(int data){
+      this.data=data;
+      this.next=null;
+    }
+
+  }
+
+    public static void main(String[] args) {
+      Node head=new Node(10);
+      head.next=new Node(20);
+      head.next.next=new Node(30);
+      System.out.println(head.data+" "+head.next.data+" "+head.next.next.data);
+    }
+
+}
+prints 10 20 30
