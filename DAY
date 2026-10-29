@@ -3186,3 +3186,61 @@ public class Main {
 
 }
 prints 10 20 30
+
+insert print of LL
+
+import java.util.*;
+class Node{
+  //this is the searate class just to create (blueprint of Linked list)
+  //every time i create Node newNode=new Node(n);
+  //this consrtuctor class is assigns the value to variables
+  int data;
+  Node next;
+  //node is custom datatype to put two things in one box
+  //[value+next]==node
+  //above is class Node
+  //below Node is constructor just to assign the value to variables 
+  Node(int data){
+    this.data=data;
+    //next varable is like refece varable to point to the next newnode thats it
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      //at first fixing node and tail to null since no Linked list is created
+      Node head=null;
+      Node tail=null;
+      //[head->null tail->null]
+//the loop starts to take input of the values involuntarly 
+  while(true){
+    int n=sc.nextInt();
+    //if the starts with value -1 breaks since user dont wanted to insert values into linked list 
+    if(n==-1){
+      break;
+    }
+    //rather than -1 if user puts any numerical value it takes value and put in LL
+    //the new keyword creates a separate spcae storage dynamically on laptop while programming
+    Node newNode=new Node(n);
+    //at first time since the head points to null head values store this newNode variable object space
+    if(head==null){
+      head=newNode;
+      tail=newNode;
+    }
+    //if head!=null then values present in LL so else tail pointing values will changes accoring to code
+    //tail next value puts newNode value
+    else{
+      tail.next=newNode;
+      tail=newNode;
+    }
+  }
+  //display loop is used to display the values in LL
+  //custome datatype Node is created for LL that has to be created for LL
+  Node current=head;//we dont wanted to loose the head pointer so current is used thats it 
+  while(current!=null){
+    System.out.print(current.data+" ");
+    current=current.next;//prints and keep on changing the values of ll
+  }
+    }
+}
