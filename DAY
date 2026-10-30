@@ -3244,3 +3244,41 @@ public class Main {
   }
     }
 }
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      String s=sc.nextLine();
+      int n=Integer.parseInt(s);
+      String ans="";
+      while(true){
+        n=n-1;
+        if(ispalindrome(n)){
+          String str=String.valueOf(n);
+          ans=str;
+          break;
+        }
+      }
+      System.out.println(ans);
+    }
+    static boolean ispalindrome(int n){
+      String sup=String.valueOf(n);
+        boolean ans=true;
+        int left=0;
+        int right=sup.length()-1;
+        while(left<right){
+          if(sup.charAt(left)!=sup.charAt(right)){
+            ans=false;
+          }
+          left++;
+          right--;
+        }
+        if(ans){
+          return true;
+        }else{
+          return false;
+        }
+    }
+}
+closest palindrome code but only minus/deceresed only 
