@@ -459,3 +459,60 @@ public class Main {
 Output:
 12345
 Sum of digits is 15
+
+
+
+-----------------------------------------------------------------------
+
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      
+      Node head=null;
+      Node tail=null;
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      Node currents=head;
+        while(currents!=null){
+          System.out.print(currents.data+" ");
+          currents=currents.next;
+      }
+      
+      System.out.println("enter value to insert at begining");
+      int num=sc.nextInt();
+      Node newNode=new Node(num);
+      newNode.next=head;
+      head=newNode;
+      Node current=head;
+        while(current!=null){
+          System.out.print(current.data+" ");
+          current=current.next;
+      }
+    }
+}
+insert at begining
+1 2 3 4 5 6 -1
+1 2 3 4 5 6 enter value to insert at begining
+0
+0 1 2 3 4 5 6
