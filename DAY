@@ -3423,3 +3423,53 @@ public class Main {
 40
 -1
 output:100
+
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      Node head=null;
+      Node tail=null;
+
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }
+        else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      int maxnum=Integer.MIN_VALUE;
+      Node current=head;
+      while(current!=null){
+        if(current.data>maxnum){
+          maxnum=current.data;
+        }
+        current=current.next;
+      }
+      System.out.println(maxnum);
+    }
+}
+1000
+9
+6
+2
+4
+6
+-1
+1000
