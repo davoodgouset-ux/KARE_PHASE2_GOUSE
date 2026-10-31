@@ -919,3 +919,67 @@ public class Main {
 Enter taget: 
 70
 5
+---------------------------------------------------
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      Node head=null;
+      Node tail=null;
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }
+        else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      Node runs=head;
+      while(runs!=null){
+        System.out.print(runs.data+" ");
+        runs=runs.next;
+      }
+      //insert at by position
+      System.out.println("enter position bro");
+      int pos=sc.nextInt();
+      int inc=0;
+      Node current=head;
+      System.out.println("enter a value of position number not value bro ");
+      int dataa=sc.nextInt();
+      Node newsetNode=new Node(dataa);
+      while(current!=null){
+        inc++;
+        if(pos==inc){
+          newsetNode.next=current.next;
+          current.next=newsetNode;
+        }
+        current=current.next;
+      }
+      Node run=head;
+      while(run!=null){
+        System.out.print(run.data+" ");
+        run=run.next;
+      }
+    }
+}
+1 2 3 4 5 6 7 8 9 -1
+1 2 3 4 5 6 7 8 9 enter position bro
+9
+enter a value of position number not value bro 
+10
+1 2 3 4 5 6 7 8 9 10 
