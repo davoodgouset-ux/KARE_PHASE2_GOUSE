@@ -813,3 +813,56 @@ public class Main {
 }
 1 2 3 4 5 6 7 8 -1
 5
+
+
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+
+      Node head=null;
+      Node tail=null;
+
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      System.out.println("Enter taget: ");
+      int target=sc.nextInt();
+      boolean ans=false;
+      int answ=1;
+      Node current=head;
+      while(current!=null){
+        if(target==current.data){
+          ans=true;
+          break;
+        }
+        answ++;
+        current=current.next;
+      }
+      System.out.print(ans ? answ:"-1");
+    }
+}
+10 203 40 506 70
+-1
+Enter taget: 
+70
+5
