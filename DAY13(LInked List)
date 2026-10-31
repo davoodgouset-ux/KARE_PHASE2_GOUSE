@@ -769,3 +769,47 @@ public class Main {
     }
 }
 inset delet and front and ends
+
+
+----------------------------------------------
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      Node head=null;
+      Node tail=null;
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }
+        else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      Node current=head;
+      Node fast=head;
+      Node slow=head;
+      while(fast!=null &&  fast.next!=null){
+        fast=fast.next.next;
+        slow=slow.next;
+      }
+        System.out.print(slow.data);
+    }
+}
+1 2 3 4 5 6 7 8 -1
+5
