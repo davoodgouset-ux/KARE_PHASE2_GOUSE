@@ -659,3 +659,113 @@ public class Main {
 
     }
 }
+
+
+-----------------------
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+
+      Node head=null;
+      Node tail=null;
+
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      Node current=head;
+      while(current!=null){
+        System.out.print(current.data+" ");
+        current=current.next;
+      }
+      //insertat begining;
+      System.out.println("enter an element to insert at begining");
+      int begining=sc.nextInt();
+      Node newNode=new Node(begining);
+      newNode.next=head;
+      head=newNode;
+      Node currents=head;
+      while(currents!=null){
+        System.out.print(currents.data+" ");
+        currents=currents.next;
+      }
+      System.out.println("enter an element to insert at ending");
+      int ending=sc.nextInt();
+      Node endNode=new Node(ending);
+      tail.next=endNode;
+      tail=endNode;
+      Node currentss=head;
+      while(currentss!=null){
+        System.out.print(currentss.data+" ");
+        currentss=currentss.next;
+      }
+      System.out.println("deleting front node ");
+      if(head!=null){
+      head=head.next;//Why? If there was only one node, deleting it makes both head and tail null.
+      if(head==null){
+        tail=null;
+      }
+      }
+      System.out.println("deleted the front Node");
+      Node currentsss=head;
+      while(currentsss!=null){
+        System.out.print(currentsss.data+" ");
+        currentsss=currentsss.next;
+      }
+      Node currentssss=head;
+      while(currentssss.next.next!=null){
+
+        if(currentssss.next.next==null){
+          currentssss=currentssss.next;
+        }
+        currentssss=currentssss.next;
+        tail=currentssss;
+      }
+      System.out.println("deleted the last Node");
+      // Delete last node
+
+        if(head == null) {
+            System.out.println("List is empty");
+        }
+        else if(head.next == null) {
+            head = null;
+            tail = null;
+        }
+        else {
+            Node currentsssss = head;
+
+            while(currentsssss.next.next != null) {
+                currentsssss = currentsssss.next;
+            }
+
+            currentsssss.next = null;
+            tail = currentsssss;
+        }
+      Node currentssssss=head;
+      while(currentssssss!=null){
+        System.out.print(currentssssss.data+" ");
+        currentssssss=currentssssss.next;
+      }
+
+    }
+}
+inset delet and front and ends
