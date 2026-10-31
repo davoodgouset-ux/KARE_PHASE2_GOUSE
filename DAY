@@ -3375,3 +3375,51 @@ public class Main {
 9
 output :9
 length of linked list
+
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      Node head=null;
+      Node tail=null;
+
+
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }
+        else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      int sum=0;
+      Node current=head;
+      while(current!=null){
+        sum+=current.data;
+        current=current.next;
+      }
+      System.out.println(sum);
+
+    }
+}
+10
+20 
+30
+40
+-1
+output:100
