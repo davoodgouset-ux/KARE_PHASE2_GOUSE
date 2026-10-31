@@ -3282,3 +3282,44 @@ public class Main {
     }
 }
 closest palindrome code but only minus/deceresed only 
+
+import java.util.*;
+
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      Node head=null;
+      Node tail=null;
+
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }
+        else{
+        tail.next=newNode;
+        tail=newNode;
+        }
+      }
+        //display
+        Node current=head;
+        while(current!=null){
+          System.out.println(current.data);
+          current=current.next;
+        }
+      System.out.print(tail.data);
+    }
+}
