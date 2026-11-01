@@ -1035,3 +1035,75 @@ public class Main {
 Enter an element to find in LL
 5
 Element found in LL and its in the 4th Node
+--------------------------------------------------------
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      Node head=null;
+      Node tail=null;
+
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }
+        else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      Node run=head;
+      while(run!=null){
+        System.out.print(run.data+" ");
+        run=run.next;
+      }
+      System.out.println("Enter a value to deleted that Node in linked list");
+      int target=sc.nextInt();
+      boolean flag=false;
+      
+              if(head!=null && head.data==target){
+                head=head.next;
+              }
+                else{
+                  Node current=head;
+                  while(current!=null && current.next!=null){
+                    if(current.next.data==target){
+                      if(current.next==null){
+                        tail=tail.next;
+                      }
+                      current.next=current.next.next;
+                      flag=true;
+                      break;
+                    }
+                    current=current.next;   
+                  }
+                }
+      if(flag){
+        System.out.println("dleted");
+        Node runs=head;
+        while(runs!=null){
+        System.out.print(runs.data+" ");
+        runs=runs.next;
+        }
+      }else{
+        System.out.print("there is no such node bro ");
+      }
+    }
+}10 2 3 4 -1
+10 2 3 4 Enter a value to deleted that Node in linked list
+8
+there is no such node bro 
