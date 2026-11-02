@@ -3515,3 +3515,48 @@ public class Main {
       System.out.println(min);
     }
 }smallest number finding
+---------------------
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int arr[]=new int[n];
+      for(int i=0;i<n;i++){
+        arr[i]=sc.nextInt();
+      }
+      int m=sc.nextInt();
+      int arr1[]=new int[m];
+      for(int i=0;i<m;i++){
+        arr1[i]=sc.nextInt();
+      }
+      int finarr[]=new int[m+n];
+      int left=0;
+      int right=0;
+      int index=0;
+      while(left<n && right<m){
+        if(arr[left]<arr1[right]){
+          finarr[index++]=arr[left];
+          left++;
+        }else{
+          finarr[index++]=arr1[right];
+          right++;
+        }
+      }
+      while(left<n){
+        finarr[index++]=arr[left];
+        left++;
+      }
+      while(right<m){
+        finarr[index++]=arr1[right];
+        right++;
+      }
+      System.out.print(Arrays.toString(finarr));
+    }
+}
+4
+1 2 4 5
+5
+0 3 7 8 9
+[0, 1, 2, 3, 4, 5, 7, 8, 9]
