@@ -3560,3 +3560,47 @@ public class Main {
 5
 0 3 7 8 9
 [0, 1, 2, 3, 4, 5, 7, 8, 9]
+------------------------------------------------------
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int arr[]={5 , 7 ,24, 6 ,3 ,53,67,0};
+      System.out.println("Before merge sort"+ Arrays.toString(arr));
+      mergeSort(arr,0,arr.length-1);
+      System.out.println("After merge sort  "+Arrays.toString(arr));
+    }
+    static void mergeSort(int arr[],int l,int r){
+      if(l>=r){
+        return;
+      }
+      int mid=l+(r-l)/2;
+      mergeSort(arr,l,mid);
+      mergeSort(arr,mid+1,r);
+      merge(arr,l,mid,r);
+    }
+    static void merge(int arr[],int l,int mid,int r){
+      int temp[]=new int[r-l+1];
+      int i=l;
+      int j=mid+1;
+      int k=0;
+      while(i<=mid && j<=r){
+        if(arr[i]<=arr[j]){
+        temp[k++]=arr[i++];
+        }else{
+          temp[k++]=arr[j++];
+        }
+      }
+      while(i<=mid){
+        temp[k++]=arr[i++];
+      }
+      while(j<=r){
+        temp[k++]=arr[j++];
+      }
+      for(int x=0;x<temp.length;x++){
+        arr[l+x]=temp[x];
+      }
+    }
+}
+Before merge sort[5, 7, 24, 6, 3, 53, 67, 0]
+After merge sort  [0, 3, 5, 6, 7, 24, 53, 67]
