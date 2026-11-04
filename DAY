@@ -3604,3 +3604,95 @@ public class Main {
 }
 Before merge sort[5, 7, 24, 6, 3, 53, 67, 0]
 After merge sort  [0, 3, 5, 6, 7, 24, 53, 67]
+-------------------------------------------
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      Node head=null;
+      Node tail=null;
+
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }
+        else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      Node current=head;
+      while(current!=null){
+        System.out.print(current.data+"->");
+        current=current.next;
+      }
+      ArrayList<Integer>list=new ArrayList<>();
+      Node temp=head;
+      while(temp!=null){
+        list.add(temp.data);
+        temp=temp.next;
+      }
+      Integer arr[]=list.toArray(new Integer[0]);
+      mergerSort(arr,0,arr.length-1);
+      System.out.println("\n"+Arrays.toString(arr));
+      Node temps=head;
+      for(int i=0;i<arr.length;i++){
+        temps.data=arr[i];
+        temps=temps.next;
+      }
+      Node go=head;
+      while(go!=null){
+        System.out.print(go.data+"->");
+        go=go.next;
+      }
+    }
+    static void mergerSort(Integer arr[],int l,int r){
+      if(l>=r){
+        return;
+      }
+      int mid=l+(r-l)/2;
+      mergerSort(arr,l,mid);
+      mergerSort(arr,mid+1,r);
+      meger(arr,l,mid,r);
+    }
+    static void meger(Integer arr[],int l,int mid,int r){
+      int i=l;
+      int j=mid+1;
+      int k=0;
+      int temp[]=new int[r-l+1];
+      while(i<=mid && j<=r){
+        if(arr[i]<arr[j]){
+          temp[k++]=arr[i++];
+        }else{
+          temp[k++]=arr[j++];
+        }
+      }
+      while(i<=mid){
+        temp[k++]=arr[i++];
+      }
+      while(j<=r){
+        temp[k++]=arr[j++];
+      }
+      for(int x=0;x<temp.length;x++){
+        arr[l+x]=temp[x];
+      }
+    }
+------------------------
+9 8 7 6 5 4 3 2 1 -1
+9->8->7->6->5->4->3->2->1->
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+1->2->3->4->5->6->7->8->9->
