@@ -1107,3 +1107,67 @@ public class Main {
 10 2 3 4 Enter a value to deleted that Node in linked list
 8
 there is no such node bro 
+-------------------------------------------------------------
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+
+      Node head=null;
+      Node tail=null;
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      ArrayList<Integer>list=new ArrayList<>();
+      Node run=head;
+      while(run!=null){
+        list.add(run.data);
+        run=run.next;
+      }
+      int arr[]=new int[list.size()];
+      for(int i=0;i<list.size();i++){
+        arr[i]=list.get(i);
+      }
+      int left=0;
+      int right=list.size()-1;
+      while(left<=right){
+        int temp=arr[left];
+        arr[left]=arr[right];
+        arr[right]=temp;
+        left++;
+        right--;
+      }
+      Node currents=head;
+      for(int i=0;i<list.size();i++){
+        currents.data=arr[i];
+        currents=currents.next;
+      }
+      Node heads=head;
+      while(heads!=null){
+        System.out.print(heads.data+"->");
+        heads=heads.next;
+      }
+    }
+}
+
+3536 56 563  345 454245 4524 3463 -1
+3463 4524 454245 345 563 56 3536 
