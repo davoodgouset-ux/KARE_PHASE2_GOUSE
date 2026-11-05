@@ -1171,3 +1171,58 @@ public class Main {
 
 3536 56 563  345 454245 4524 3463 -1
 3463 4524 454245 345 563 56 3536 
+---------------------------------------------------
+//linked list o(n) time and o(1) space complexity
+import java.util.*;
+class Node{
+int data;
+Node next;
+Node(int data){
+  this.data=data;
+  this.next=null;
+}
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+
+      Node head=null;
+      Node tail=null;
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      // Node run =head;
+      // while(run!=null){
+      //   System.out.print(run.data);
+      //   run=run.next;
+      // }
+      Node prev=null;
+      Node current=head;
+      while(current!=null){
+        Node next=current.next;
+        current.next=prev;
+        prev=current;
+        current=next;
+      }
+
+      System.out.print("head->");
+      while(prev!=null){
+        System.out.print(prev.data+"->");
+        prev=prev.next;
+      }
+      System.out.print("null");
+    }
+}
+1 2 3 4 5 -1
+head->5->4->3->2->1->null
