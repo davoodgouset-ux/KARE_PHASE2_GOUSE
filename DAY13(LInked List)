@@ -1226,3 +1226,68 @@ public class Main {
 }
 1 2 3 4 5 -1
 head->5->4->3->2->1->null
+------------------------------------------
+import java.util.*;
+class Node{
+  int data;
+  Node next;
+  Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      
+      Node head=null;
+      Node tail=null;
+      while(true){
+        int n=sc.nextInt();
+        if(n==-1){
+          break;
+        }
+        Node newNode=new Node(n);
+        if(head==null){
+          head=newNode;
+          tail=newNode;
+        }else{
+          tail.next=newNode;
+          tail=newNode;
+        }
+      }
+      Node fast=head;
+      Node slow=head;
+      while(fast!=null && fast.next!=null){
+        fast=fast.next.next;
+        slow=slow.next;
+      }
+      Node current=slow;
+      Node prev=null;
+      while(current!=null){
+        Node next=current.next;
+        current.next=prev;
+        prev=current;
+        current=next;
+      }
+      boolean ans=true;
+      Node curr=head;
+      while(curr!=null){
+        if(prev.data!=curr.data){
+          ans=false;
+          break;
+        }
+        prev=prev.next;
+        curr=curr.next;
+      }
+      if(ans){
+        System.out.print("Palindrome");
+      }else{
+        System.out.print("No Palindrome");
+      }
+      
+
+    }
+}
+1 2 3 4 1 -1
+No Palindrome
