@@ -3696,3 +3696,39 @@ public class Main {
 9->8->7->6->5->4->3->2->1->
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 1->2->3->4->5->6->7->8->9->
+
+
+------------------------------------------
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      sc.nextLine();
+      String arr[]=new String[n];
+      for(int i=0;i<n;i++){
+        arr[i]=sc.nextLine();
+      }
+      HashMap<String,List<String>>map=new HashMap<>();
+      for(String word:arr){
+        char letters[]=word.toCharArray();
+        Arrays.sort(letters);
+        String frame=new String(letters);
+        if(!map.containsKey(frame)){
+          map.put(frame,new ArrayList<>());
+        }
+        map.get(frame).add(word);
+      }
+      System.out.print(map.values());
+    }
+}
+6
+eat
+tea
+tan
+ate
+nat
+bat
+
+[[eat, tea, ate], [bat], [tan, nat]]
